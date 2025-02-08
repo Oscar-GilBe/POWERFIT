@@ -1,5 +1,7 @@
 # POWERFIT
 
+![image](https://github.com/user-attachments/assets/2a37eaf1-e2d4-4274-8ca5-75a12dcd1ca9)
+
 **POWERFIT** es un sistema de información diseñado para gestionar y reservar actividades en el gimnasio. La aplicación está pensada para tres tipos de usuarios:
 
 - **Cliente**
@@ -13,6 +15,8 @@ Cada rol tiene funcionalidades específicas que se detallan a continuación.
 # Funcionalidades del Sistema
 
 ## Cliente
+
+![image](https://github.com/user-attachments/assets/468e130c-1b3d-4369-93d4-6c7c0f5f6277)
 
 - **Registro y Autenticación**
   - El sistema permitirá registrarse aportando su información personal: **nombre**, **apellidos**, **correo** y **contraseña**.
@@ -50,6 +54,8 @@ Cada rol tiene funcionalidades específicas que se detallan a continuación.
 
 ## Monitor
 
+![image](https://github.com/user-attachments/assets/c96d5bd2-a87c-448f-960d-ecc7a8947dd8)
+
 - **Autenticación y Sesión**
   - El sistema permitirá identificarse introduciendo su correo y contraseña.
   - El sistema permitirá cerrar la sesión.
@@ -63,6 +69,8 @@ Cada rol tiene funcionalidades específicas que se detallan a continuación.
 ---
 
 ## Administrador
+
+![image](https://github.com/user-attachments/assets/648db7c8-d20a-4b50-ab67-142daa7d32b7)
 
 - **Autenticación**
   - El sistema permitirá identificarse introduciendo su correo y contraseña.
@@ -115,6 +123,7 @@ Para probar nuestro sistema, hemos almacenado en la base de datos las siguientes
   **Contraseña:** `admin`
 
 #### MONITORES
+
 Las cuentas de monitores tienen una contraseña con el formato `password_{nombre}`.  
 Ejemplos:
 - **Correo:** `laura.s@powerfit.com`  
