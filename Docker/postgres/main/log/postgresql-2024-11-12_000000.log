@@ -1,0 +1,6 @@
+2024-11-13 17:42:17.149 CET [7696] LOG:  empezando checkpoint: time
+2024-11-13 17:42:17.309 CET [7696] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.122 s, sync=0.002 s, total=0.166 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=4 kB, estimación=373 kB; lsn=0/1B2E4C8, lsn de redo=0/1B2E470
+2024-11-13 17:52:17.294 CET [7696] LOG:  empezando checkpoint: time
+2024-11-13 17:52:32.828 CET [7696] LOG:  checkpoint completo: escritos 143 búfers (0.9%); 1 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=15.427 s, sync=0.009 s, total=15.535 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=1097 kB, estimación=1097 kB; lsn=0/1C40948, lsn de redo=0/1C408B8
+2024-11-13 18:07:17.819 CET [7696] LOG:  empezando checkpoint: time
+2024-11-13 18:07:20.554 CET [7696] LOG:  checkpoint completo: escritos 26 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.717 s, sync=0.008 s, total=2.735 s; archivos sincronizados=10, más largo=0.003 s, promedio=0.001 s; distancia=154 kB, estimación=1002 kB; lsn=0/1C672B8, lsn de redo=0/1C67228

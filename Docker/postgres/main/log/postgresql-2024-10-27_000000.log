@@ -1,0 +1,71 @@
+2024-10-28 19:40:29.517 GMT [47532] FATAL:  could not reattach to shared memory (key=00000000000001CC, addr=000001FB80000000): error code 1455
+2024-10-28 20:41:06.955 CET [25628] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-10-29 10:03:58.700 CET [8024] WARNING:  proceso ayudante autovacuum tomó demasiado tiempo para iniciarse; cancelado
+2024-10-29 18:05:52.592 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 18:05:53.083 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.443 s, sync=0.006 s, total=0.505 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.002 s; distancia=2 kB, estimación=9 kB; lsn=0/16BB9B0, lsn de redo=0/16BB958
+2024-10-29 18:15:52.103 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 18:15:52.557 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.438 s, sync=0.007 s, total=0.455 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=3 kB, estimación=8 kB; lsn=0/16BC5C0, lsn de redo=0/16BC568
+2024-10-29 18:55:52.613 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 18:55:52.738 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.115 s, sync=0.003 s, total=0.128 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=8 kB; lsn=0/16BC9D0, lsn de redo=0/16BC978
+2024-10-29 19:05:52.758 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 19:05:52.873 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.103 s, sync=0.004 s, total=0.116 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=7 kB; lsn=0/16BCD80, lsn de redo=0/16BCD28
+2024-10-29 19:20:52.904 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 19:20:53.140 CET [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.219 s, sync=0.004 s, total=0.237 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=6 kB; lsn=0/16BD1C8, lsn de redo=0/16BD170
+2024-10-29 19:30:52.171 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 19:30:52.631 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.436 s, sync=0.006 s, total=0.460 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=4 kB, estimación=6 kB; lsn=0/16BE4F0, lsn de redo=0/16BE498
+2024-10-29 19:40:52.680 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 19:40:52.919 CET [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.224 s, sync=0.004 s, total=0.240 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=6 kB; lsn=0/16BEC80, lsn de redo=0/16BEC28
+2024-10-29 19:45:52.950 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 19:45:53.393 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.428 s, sync=0.007 s, total=0.443 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=4 kB, estimación=5 kB; lsn=0/16BFF08, lsn de redo=0/16BFEB0
+2024-10-29 20:06:26.442 CET [49072] ERROR:  error de sintaxis en o cerca de Â«.Â» en carÃ¡cter 68
+2024-10-29 20:06:26.442 CET [49072] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.fin clase.plazas_disponibles, clase.actividad FROM clase, reserva, cliente WHERE clase.actividad = reserva.actividad AND clase.fecha = reserva.fecha AND clase.dia_semana = reserva.dia_semana AND clase.inicio = reserva.hora AND reserva.cliente = $1 AND clase.fecha <= $2 AND clase.fecha >= $3 ORDER BY clase.fecha ASC
+2024-10-29 20:12:02.824 CET [49072] ERROR:  error de sintaxis en o cerca de Â«.Â» en carÃ¡cter 68
+2024-10-29 20:12:02.824 CET [49072] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.fin clase.plazas_disponibles, clase.actividad FROM clase, reserva, cliente WHERE clase.actividad = reserva.actividad AND clase.fecha = reserva.fecha AND clase.dia_semana = reserva.dia_semana AND clase.inicio = reserva.hora AND reserva.cliente = $1 AND clase.fecha <= $2 AND clase.fecha >= $3 ORDER BY clase.fecha ASC
+2024-10-29 20:15:55.015 CET [12284] ERROR:  error de sintaxis en o cerca de Â«:Â» en carÃ¡cter 141
+2024-10-29 20:15:55.015 CET [12284] SENTENCIA:  insert into sisinf_p2.RESERVA (cliente, actividad, fecha, dia_semana, hora)
+	values ('b.a.ruben26@gmail.com', 'pilates', 2024-10-28, 'L', (8:00);
+	
+	insert into sisinf_p2.RESERVA (cliente, actividad, fecha, dia_semana, hora)
+	values ('b.a.ruben26@gmail.com', 'pilates', 2024-10-30, 'X', (15:00);
+	
+	SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.fin, clase.plazas_disponibles, clase.actividad 
+	FROM clase, reserva 
+	WHERE clase.actividad = reserva.actividad AND clase.fecha = reserva.fecha AND clase.inicio = reserva.hora 
+	AND reserva.cliente = 'b.a.ruben26@gmail.com' AND clase.fecha <= 2024-11-03 AND clase.fecha >= 2024-10-28
+	ORDER BY clase.fecha ASC
+2024-10-29 20:16:23.998 CET [12284] ERROR:  error de sintaxis en o cerca de Â«:Â» en carÃ¡cter 140
+2024-10-29 20:16:23.998 CET [12284] SENTENCIA:  insert into sisinf_p2.RESERVA (cliente, actividad, fecha, dia_semana, hora)
+	values ('b.a.ruben26@gmail.com', 'pilates', 2024-10-28, 'L', 8:00)
+2024-10-29 20:16:48.295 CET [12284] ERROR:  error de sintaxis en o cerca de Â«:Â» en carÃ¡cter 141
+2024-10-29 20:16:48.295 CET [12284] SENTENCIA:  insert into sisinf_p2.RESERVA (cliente, actividad, fecha, dia_semana, hora)
+	values ('b.a.ruben26@gmail.com', 'pilates', 2024-10-28, 'L', 08:00:00)
+2024-10-29 20:17:24.704 CET [12284] ERROR:  inserciÃ³n o actualizaciÃ³n en la tabla Â«reservaÂ» viola la llave forÃ¡nea Â«reserva_actividad_fecha_dia_semana_hora_fkeyÂ»
+2024-10-29 20:17:24.704 CET [12284] DETALLE:  La llave (actividad, fecha, dia_semana, hora)=(pilates, 2024-10-28, L, 08:00:00) no estÃ¡ presente en la tabla Â«claseÂ».
+2024-10-29 20:17:24.704 CET [12284] SENTENCIA:  insert into sisinf_p2.RESERVA (cliente, actividad, fecha, dia_semana, hora)
+	values ('b.a.ruben26@gmail.com', 'pilates', '2024-10-28', 'L', '08:00:00')
+2024-10-29 20:18:00.219 CET [12284] ERROR:  no existe la relaciÃ³n Â«claseÂ» en carÃ¡cter 113
+2024-10-29 20:18:00.219 CET [12284] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.fin, clase.plazas_disponibles, clase.actividad 
+	FROM clase, reserva 
+	WHERE clase.actividad = reserva.actividad AND clase.fecha = reserva.fecha AND clase.inicio = reserva.hora 
+	AND reserva.cliente = 'b.a.ruben26@gmail.com' AND clase.fecha <= 2024-11-03 AND clase.fecha >= 2024-10-28
+	ORDER BY clase.fecha ASC
+2024-10-29 20:18:33.885 CET [12284] ERROR:  el operador no existe: date <= integer en carÃ¡cter 320
+2024-10-29 20:18:33.885 CET [12284] HINT:  NingÃºn operador coincide en el nombre y tipos de argumentos. Puede ser necesario agregar conversiÃ³n explÃ­cita de tipos.
+2024-10-29 20:18:33.885 CET [12284] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.fin, clase.plazas_disponibles, clase.actividad 
+	FROM sisinf_p2.clase, sisinf_p2.reserva 
+	WHERE clase.actividad = reserva.actividad AND clase.fecha = reserva.fecha AND clase.inicio = reserva.hora 
+	AND reserva.cliente = 'b.a.ruben26@gmail.com' AND clase.fecha <= 2024-11-03 AND clase.fecha >= 2024-10-28
+	ORDER BY clase.fecha ASC
+2024-10-29 20:20:52.520 CET [7696] LOG:  empezando checkpoint: time
+2024-10-29 20:20:53.085 CET [7696] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.549 s, sync=0.007 s, total=0.566 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=3 kB, estimación=5 kB; lsn=0/16C0B98, lsn de redo=0/16C0B40
+2024-10-30 18:35:08.861 CET [38992] ERROR:  no existe la relaciÃ³n Â«reservaÂ» en carÃ¡cter 13
+2024-10-30 18:35:08.861 CET [38992] SENTENCIA:  DELETE FROM Reserva WHERE cliente = 'b.a.ruben26@gmail.com' AND actividad = 'pilates' AND fecha = '2024-10-28 ' AND hora = '08:00:00'
+2024-10-30 18:39:13.226 CET [7696] LOG:  empezando checkpoint: time
+2024-10-30 18:39:13.681 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.438 s, sync=0.006 s, total=0.460 s; archivos sincronizados=5, más largo=0.004 s, promedio=0.002 s; distancia=2 kB, estimación=5 kB; lsn=0/16C1738, lsn de redo=0/16C16E0
+2024-10-30 18:49:13.649 CET [7696] LOG:  empezando checkpoint: time
+2024-10-30 18:49:14.001 CET [7696] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.336 s, sync=0.008 s, total=0.355 s; archivos sincronizados=4, más largo=0.006 s, promedio=0.002 s; distancia=2 kB, estimación=5 kB; lsn=0/16C2058, lsn de redo=0/16C1FE8
+2024-10-30 18:59:13.970 CET [7696] LOG:  empezando checkpoint: time
+2024-10-30 18:59:14.412 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.428 s, sync=0.005 s, total=0.442 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=3 kB, estimación=4 kB; lsn=0/16C2F08, lsn de redo=0/16C2EB0
+2024-10-30 19:04:13.401 CET [7696] LOG:  empezando checkpoint: time
+2024-10-30 19:04:13.858 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.442 s, sync=0.005 s, total=0.458 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=4 kB, estimación=4 kB; lsn=0/16C3F38, lsn de redo=0/16C3EE0

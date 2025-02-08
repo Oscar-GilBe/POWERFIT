@@ -1,0 +1,32 @@
+2024-11-08 10:30:58.532 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 10:30:59.319 CET [7696] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.767 s, sync=0.004 s, total=0.793 s; archivos sincronizados=7, más largo=0.001 s, promedio=0.001 s; distancia=1 kB, estimación=525 kB; lsn=0/17CFCA8, lsn de redo=0/17CFC50
+2024-11-08 12:27:58.206 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 12:27:59.104 CET [7696] LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.870 s, sync=0.012 s, total=0.901 s; archivos sincronizados=8, más largo=0.004 s, promedio=0.002 s; distancia=1 kB, estimación=473 kB; lsn=0/17D02F8, lsn de redo=0/17D02A0
+2024-11-08 12:32:58.108 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 12:32:58.790 CET [7696] LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.653 s, sync=0.008 s, total=0.683 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.002 s; distancia=3 kB, estimación=426 kB; lsn=0/17D0FB8, lsn de redo=0/17D0F60
+2024-11-08 12:33:48.140 CET [12056] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«reserva_pkeyÂ»
+2024-11-08 12:33:48.140 CET [12056] DETALLE:  Ya existe la llave (cliente, actividad, fecha, hora)=(b.a.ruben26@gmail.com, pilates, 2024-11-11, 15:00:00).
+2024-11-08 12:33:48.140 CET [12056] SENTENCIA:  INSERT INTO Reserva (cliente, actividad, fecha, hora) VALUES ($1, $2, $3, $4)
+2024-11-08 12:37:13.309 CET [56940] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«reserva_pkeyÂ»
+2024-11-08 12:37:13.309 CET [56940] DETALLE:  Ya existe la llave (cliente, actividad, fecha, hora)=(b.a.ruben26@gmail.com, pilates, 2024-11-11, 15:00:00).
+2024-11-08 12:37:13.309 CET [56940] SENTENCIA:  INSERT INTO Reserva (cliente, actividad, fecha, hora) VALUES ($1, $2, $3, $4)
+2024-11-08 12:37:58.801 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 12:37:59.920 CET [7696] LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.094 s, sync=0.011 s, total=1.119 s; archivos sincronizados=10, más largo=0.003 s, promedio=0.002 s; distancia=3 kB, estimación=384 kB; lsn=0/17D1F30, lsn de redo=0/17D1ED8
+2024-11-08 12:42:58.931 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 12:43:00.048 CET [7696] LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.095 s, sync=0.007 s, total=1.118 s; archivos sincronizados=8, más largo=0.001 s, promedio=0.001 s; distancia=9 kB, estimación=346 kB; lsn=0/17D4378, lsn de redo=0/17D4320
+2024-11-08 12:50:22.210 CET [57576] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«reserva_pkeyÂ»
+2024-11-08 12:50:22.210 CET [57576] DETALLE:  Ya existe la llave (cliente, actividad, fecha, hora)=(b.a.ruben26@gmail.com, pilates, 2024-11-11, 15:00:00).
+2024-11-08 12:50:22.210 CET [57576] SENTENCIA:  INSERT INTO Reserva (cliente, actividad, fecha, hora) VALUES ($1, $2, $3, $4)
+2024-11-08 12:52:58.066 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 12:52:58.862 CET [7696] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.774 s, sync=0.008 s, total=0.797 s; archivos sincronizados=8, más largo=0.003 s, promedio=0.001 s; distancia=6 kB, estimación=312 kB; lsn=0/17D5BD0, lsn de redo=0/17D5B78
+2024-11-08 13:17:58.908 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 13:17:59.366 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.438 s, sync=0.006 s, total=0.459 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=2 kB, estimación=281 kB; lsn=0/17D63D0, lsn de redo=0/17D6378
+2024-11-08 13:32:06.982 CET [23544] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«resena_pkeyÂ»
+2024-11-08 13:32:06.982 CET [23544] DETALLE:  Ya existe la llave (cliente, actividad)=(correo@gmail.com, pilates).
+2024-11-08 13:32:06.982 CET [23544] SENTENCIA:  INSERT INTO resena (puntuacion, texto, cliente, actividad) VALUES ($1, $2, $3, $4)
+2024-11-08 13:32:58.388 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 13:32:58.850 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.441 s, sync=0.008 s, total=0.463 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=2 kB, estimación=253 kB; lsn=0/17D6C98, lsn de redo=0/17D6C40
+2024-11-08 13:47:58.880 CET [7696] LOG:  empezando checkpoint: time
+2024-11-08 13:47:59.010 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.113 s, sync=0.004 s, total=0.131 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=228 kB; lsn=0/17D7160, lsn de redo=0/17D7108
+2024-11-08 18:23:56.898 CET [51276] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

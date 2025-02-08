@@ -1,0 +1,10 @@
+2024-11-27 18:25:56.482 CET [7872] LOG:  el sistema de bases de datos fue apagado en 2024-11-26 22:10:02 CET
+2024-11-27 18:30:56.490 CET [32128] LOG:  empezando checkpoint: time
+2024-11-27 18:30:56.725 CET [32128] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.220 s, sync=0.004 s, total=0.238 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.001 s; distancia=4 kB, estimación=4 kB; lsn=0/4939B78, lsn de redo=0/4939B20
+2024-11-27 18:33:20.720 CET [32236] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 18:33:20.724 CET [32052] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 18:33:20.725 CET [18944] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 18:33:20.727 CET [19448] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 18:33:20.738 CET [32128] LOG:  apagando
+2024-11-27 18:33:20.740 CET [32128] LOG:  empezando checkpoint: shutdown immediate
+2024-11-27 18:33:20.766 CET [32128] LOG:  checkpoint completo: escritos 23 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.010 s, total=0.028 s; archivos sincronizados=17, más largo=0.001 s, promedio=0.001 s; distancia=141 kB, estimación=141 kB; lsn=0/495D140, lsn de redo=0/495D140

@@ -1,0 +1,320 @@
+2024-11-11 11:04:59.821 CET [53980] ERROR:  el valor nulo en la columna Â«imagenÂ» de la relaciÃ³n Â«actividadÂ» viola la restricciÃ³n de no nulo
+2024-11-11 11:04:59.821 CET [53980] DETALLE:  La fila que falla contiene (Yoga BÃ¡sico, Flexibilidad, 15, FACIL, Esterilla, 1, monitor1@powerfit.com, null).
+2024-11-11 11:04:59.821 CET [53980] SENTENCIA:  -- Insertar 20 actividades
+	-- InserciÃ³n de 20 actividades en la tabla ACTVIDAD
+	INSERT INTO sisinf_p2.ACTIVIDAD (nombre, grupo_muscular, plazas, dificultad, material, sala, monitor) 
+	VALUES
+		('Yoga BÃ¡sico', 'Flexibilidad', 15, 'FACIL', 'Esterilla', 1, 'monitor1@powerfit.com'),
+		('Pilates Avanzado', 'Core', 20, 'DIFICIL', 'Banda de Resistencia', 2, 'monitor2@powerfit.com'),
+		('Spinning', 'Cardio', 25, 'MEDIA', 'Bicicletas', 3, 'monitor3@powerfit.com'),
+		('Body Combat', 'Cardio', 30, 'DIFICIL', 'Guantes de Boxeo', 4, 'monitor4@powerfit.com'),
+		('Zumba', 'Cardio', 20, 'FACIL', 'Ninguno', 5, 'monitor5@powerfit.com'),
+		('Crossfit', 'Fuerza', 15, 'DIFICIL', 'Pesas', 6, 'monitor6@powerfit.com'),
+		('TRX', 'Core', 18, 'MEDIA', 'TRX', 7, 'monitor7@powerfit.com'),
+		('HIIT', 'Cardio', 20, 'DIFICIL', 'Ninguno', 8, 'monitor8@powerfit.com'),
+		('Step', 'Cardio', 25, 'MEDIA', 'Step', 9, 'monitor9@powerfit.com'),
+		('Boxeo', 'Fuerza', 12, 'MEDIA', 'Sacos de Boxeo', 10, 'monitor10@powerfit.com'),
+		('Yoga Avanzado', 'Flexibilidad', 10, 'DIFICIL', 'Esterilla', 1, 'monitor1@powerfit.com'),
+		('Kickboxing', 'Fuerza', 15, 'DIFICIL', 'Guantes de Boxeo', 2, 'monitor2@powerfit.com'),
+		('Ballet Fit', 'Flexibilidad', 20, 'MEDIA', 'Barra', 3, 'monitor3@powerfit.com'),
+		('Ciclismo Indoor', 'Cardio', 25, 'MEDIA', 'Bicicletas', 4, 'monitor4@powerfit.com'),
+		('Aqua Zumba', 'Cardio', 15, 'FACIL', 'Piscina', 5, 'monitor5@powerfit.com'),
+		('Fuerza y Resistencia', 'Fuerza', 20, 'DIFICIL', 'Pesas', 6, 'monitor6@powerfit.com'),
+		('Estiramientos', 'Flexibilidad', 30, 'FACIL', 'Esterilla', 7, 'monitor7@powerfit.com'),
+		('Danza Fitness', 'Cardio', 25, 'MEDIA', 'Ninguno', 8, 'monitor8@powerfit.com'),
+		('Powerlifting', 'Fuerza', 12, 'DIFICIL', 'Barra de Pesas', 9, 'monitor9@powerfit.com'),
+		('Aerobox', 'Cardio', 20, 'MEDIA', 'Guantes de Boxeo', 10, 'monitor10@powerfit.com')
+2024-11-11 11:08:37.924 CET [60424] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-11 11:09:29.063 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:09:40.817 CET [7696] LOG:  checkpoint completo: escritos 108 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=11.666 s, sync=0.052 s, total=11.760 s; archivos sincronizados=66, más largo=0.003 s, promedio=0.001 s; distancia=664 kB, estimación=664 kB; lsn=0/1944420, lsn de redo=0/1944390
+2024-11-11 11:14:29.834 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:14:32.363 CET [7696] LOG:  checkpoint completo: escritos 24 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.503 s, sync=0.013 s, total=2.529 s; archivos sincronizados=17, más largo=0.003 s, promedio=0.001 s; distancia=47 kB, estimación=603 kB; lsn=0/1950168, lsn de redo=0/1950110
+2024-11-11 11:18:33.273 CET [9780] ERROR:  la columna 1 en la consulta recursiva Â«dias_mes_siguienteÂ» tiene tipo date en el tÃ©rmino no recursivo, pero timestamp without time zone en general en carÃ¡cter 96
+2024-11-11 11:18:33.273 CET [9780] HINT:  Aplique una conversiÃ³n de tipo a la salida del tÃ©rmino no recursivo al tipo correcto.
+2024-11-11 11:18:33.273 CET [9780] SENTENCIA:  -- Establece el mes actual y el siguiente
+	WITH RECURSIVE dias_mes_siguiente AS (
+	    SELECT (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')::DATE AS fecha
+	    UNION ALL
+	    SELECT fecha + INTERVAL '1 day'
+	    FROM dias_mes_siguiente
+	    WHERE EXTRACT(MONTH FROM fecha + INTERVAL '1 day') = EXTRACT(MONTH FROM DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')
+	)
+	
+	-- Recupera el horario de este mes para cada actividad
+	SELECT DISTINCT clase.actividad, clase.dia_semana, clase.inicio, clase.fin
+	INTO TEMP horarios_mes_actual
+	FROM sisinf_p2.CLASE clase
+	JOIN sisinf_p2.ACTIVIDAD actividad ON actividad.nombre = clase.actividad
+	WHERE EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE)
+	AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE)
+2024-11-11 11:20:08.121 CET [9780] ERROR:  no existe la relaciÃ³n Â«dias_mes_siguienteÂ» en carÃ¡cter 195
+2024-11-11 11:20:08.121 CET [9780] CONSULTA:  INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM dias_mes_siguiente dia
+	            JOIN horarios_mes_actual h ON TO_CHAR(dia.fecha, 'DAY') = UPPER(h.dia_semana)
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad
+2024-11-11 11:20:08.121 CET [9780] CONTEXTO:  funciÃ³n PL/pgSQL inline_code_block en la lÃ­nea 15 en sentencia SQL
+2024-11-11 11:20:08.121 CET [9780] SENTENCIA:  -- Itera por cada actividad y crea clases para el siguiente mes si no hay ninguna
+	DO $$ 
+	DECLARE
+	    rec RECORD;
+	BEGIN
+	    FOR rec IN SELECT DISTINCT actividad FROM horarios_mes_actual LOOP
+	        -- Comprueba si ya existen clases para el prÃ³ximo mes para esta actividad
+	        IF NOT EXISTS (
+	            SELECT 1 
+	            FROM sisinf_p2.CLASE clase
+	            WHERE clase.actividad = rec.actividad
+	            AND EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE + INTERVAL '1 month')
+	            AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE + INTERVAL '1 month')
+	        ) THEN
+	            -- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	            INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM dias_mes_siguiente dia
+	            JOIN horarios_mes_actual h ON TO_CHAR(dia.fecha, 'DAY') = UPPER(h.dia_semana)
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad;
+	        END IF;
+	    END LOOP;
+	END $$
+2024-11-11 11:20:24.323 CET [9780] ERROR:  la relaciÃ³n Â«horarios_mes_actualÂ» ya existe
+2024-11-11 11:20:24.323 CET [9780] SENTENCIA:  -- Establece el mes siguiente
+	WITH RECURSIVE dias_mes_siguiente AS (
+	    SELECT (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')::DATE AS fecha
+	    UNION ALL
+	    SELECT (fecha + INTERVAL '1 day')::DATE  -- Convierte explÃ­citamente a DATE en cada iteraciÃ³n
+	    FROM dias_mes_siguiente
+	    WHERE EXTRACT(MONTH FROM fecha + INTERVAL '1 day') = EXTRACT(MONTH FROM DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')
+	)
+	
+	-- Recupera el horario de este mes para cada actividad
+	SELECT DISTINCT clase.actividad, clase.dia_semana, clase.inicio, clase.fin
+	INTO TEMP horarios_mes_actual
+	FROM sisinf_p2.CLASE clase
+	JOIN sisinf_p2.ACTIVIDAD actividad ON actividad.nombre = clase.actividad
+	WHERE EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE)
+	AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE)
+2024-11-11 11:21:27.021 CET [9780] ERROR:  la relaciÃ³n Â«horarios_mes_actualÂ» ya existe
+2024-11-11 11:21:27.021 CET [9780] SENTENCIA:  -- Establece el mes siguiente
+	WITH RECURSIVE dias_mes_siguiente AS (
+	    SELECT (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')::DATE AS fecha
+	    UNION ALL
+	    SELECT (fecha + INTERVAL '1 day')::DATE  -- Convierte explÃ­citamente a DATE en cada iteraciÃ³n
+	    FROM dias_mes_siguiente
+	    WHERE EXTRACT(MONTH FROM fecha + INTERVAL '1 day') = EXTRACT(MONTH FROM DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')
+	)
+	
+	-- Recupera el horario de este mes para cada actividad
+	SELECT DISTINCT clase.actividad, clase.dia_semana, clase.inicio, clase.fin
+	INTO TEMP horarios_mes_actual
+	FROM sisinf_p2.CLASE clase
+	JOIN sisinf_p2.ACTIVIDAD actividad ON actividad.nombre = clase.actividad
+	WHERE EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE)
+	AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE)
+2024-11-11 11:22:45.508 CET [9780] ERROR:  no existe la relaciÃ³n Â«dias_mes_siguienteÂ» en carÃ¡cter 195
+2024-11-11 11:22:45.508 CET [9780] CONSULTA:  INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM dias_mes_siguiente dia
+	            JOIN horarios_mes_actual h ON TO_CHAR(dia.fecha, 'DAY') = UPPER(h.dia_semana)
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad
+2024-11-11 11:22:45.508 CET [9780] CONTEXTO:  funciÃ³n PL/pgSQL inline_code_block en la lÃ­nea 15 en sentencia SQL
+2024-11-11 11:22:45.508 CET [9780] SENTENCIA:  -- Itera por cada actividad y crea clases para el siguiente mes si no hay ninguna
+	DO $$ 
+	DECLARE
+	    rec RECORD;
+	BEGIN
+	    FOR rec IN SELECT DISTINCT actividad FROM horarios_mes_actual LOOP
+	        -- Comprueba si ya existen clases para el prÃ³ximo mes para esta actividad
+	        IF NOT EXISTS (
+	            SELECT 1 
+	            FROM sisinf_p2.CLASE clase
+	            WHERE clase.actividad = rec.actividad
+	            AND EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE + INTERVAL '1 month')
+	            AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE + INTERVAL '1 month')
+	        ) THEN
+	            -- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	            INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM dias_mes_siguiente dia
+	            JOIN horarios_mes_actual h ON TO_CHAR(dia.fecha, 'DAY') = UPPER(h.dia_semana)
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad;
+	        END IF;
+	    END LOOP;
+	END $$
+2024-11-11 11:24:29.386 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:24:35.093 CET [7696] LOG:  checkpoint completo: escritos 53 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.666 s, sync=0.027 s, total=5.707 s; archivos sincronizados=29, más largo=0.003 s, promedio=0.001 s; distancia=241 kB, estimación=567 kB; lsn=0/198C8F8, lsn de redo=0/198C8A0
+2024-11-11 11:28:24.264 CET [9780] ERROR:  la relaciÃ³n Â«dias_mes_siguienteÂ» ya existe
+2024-11-11 11:28:24.264 CET [9780] CONTEXTO:  sentencia SQL: Â«CREATE TEMP TABLE dias_mes_siguiente AS
+	    WITH RECURSIVE dias AS (
+	        SELECT (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')::DATE AS fecha
+	        UNION ALL
+	        SELECT (fecha + INTERVAL '1 day')::DATE
+	        FROM dias
+	        WHERE EXTRACT(MONTH FROM fecha + INTERVAL '1 day') = EXTRACT(MONTH FROM DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')
+	    )
+	    SELECT fecha FROM diasÂ»
+	funciÃ³n PL/pgSQL inline_code_block en la lÃ­nea 7 en sentencia SQL
+2024-11-11 11:28:24.264 CET [9780] SENTENCIA:  -- Ejecuta el bloque DO para iterar por cada actividad y crear clases para el siguiente mes si no hay ninguna
+	DO $$ 
+	DECLARE
+	    rec RECORD;
+	    dia RECORD;
+	BEGIN
+	    -- Crea una tabla temporal con todos los dÃ­as del mes siguiente
+	    CREATE TEMP TABLE dias_mes_siguiente AS
+	    WITH RECURSIVE dias AS (
+	        SELECT (DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')::DATE AS fecha
+	        UNION ALL
+	        SELECT (fecha + INTERVAL '1 day')::DATE
+	        FROM dias
+	        WHERE EXTRACT(MONTH FROM fecha + INTERVAL '1 day') = EXTRACT(MONTH FROM DATE_TRUNC('month', CURRENT_DATE) + INTERVAL '1 month')
+	    )
+	    SELECT fecha FROM dias;
+	
+	    -- Itera por cada actividad para programar clases en el prÃ³ximo mes si no hay ninguna
+	    FOR rec IN SELECT DISTINCT actividad FROM horarios_mes_actual LOOP
+	        -- Comprueba si ya existen clases para el prÃ³ximo mes para esta actividad
+	        IF NOT EXISTS (
+	            SELECT 1 
+	            FROM sisinf_p2.CLASE clase
+	            WHERE clase.actividad = rec.actividad
+	            AND EXTRACT(MONTH FROM clase.fecha) = EXTRACT(MONTH FROM CURRENT_DATE + INTERVAL '1 month')
+	            AND EXTRACT(YEAR FROM clase.fecha) = EXTRACT(YEAR FROM CURRENT_DATE + INTERVAL '1 month')
+	        ) THEN
+	            -- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	            FOR dia IN 
+	                SELECT fecha FROM dias_mes_siguiente
+	            LOOP
+	                -- Compara el dÃ­a de la semana de `dia.fecha` con `h.dia_semana` usando valores numÃ©ricos de 0 a 6 (domingo a sÃ¡bado)
+	                INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	                SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	                FROM horarios_mes_actual h
+	                JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	                WHERE h.actividad = rec.actividad
+	                AND EXTRACT(DOW FROM dia.fecha) = CASE h.dia_semana
+	                    WHEN 'DOMINGO' THEN 0
+	                    WHEN 'LUNES' THEN 1
+	                    WHEN 'MARTES' THEN 2
+	                    WHEN 'MIERCOLES' THEN 3
+	                    WHEN 'JUEVES' THEN 4
+	                    WHEN 'VIERNES' THEN 5
+	                    WHEN 'SABADO' THEN 6
+	                END;
+	            END LOOP;
+	        END IF;
+	    END LOOP;
+	END $$
+2024-11-11 11:29:29.109 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:29:31.411 CET [7696] LOG:  checkpoint completo: escritos 22 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.277 s, sync=0.017 s, total=2.303 s; archivos sincronizados=17, más largo=0.003 s, promedio=0.001 s; distancia=102 kB, estimación=520 kB; lsn=0/19A63A8, lsn de redo=0/19A6350
+2024-11-11 11:34:29.419 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:34:34.386 CET [7696] LOG:  checkpoint completo: escritos 46 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.907 s, sync=0.049 s, total=4.968 s; archivos sincronizados=17, más largo=0.015 s, promedio=0.003 s; distancia=170 kB, estimación=485 kB; lsn=0/19D0E70, lsn de redo=0/19D0DE0
+2024-11-11 11:39:29.402 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:39:35.316 CET [7696] LOG:  checkpoint completo: escritos 55 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.881 s, sync=0.019 s, total=5.914 s; archivos sincronizados=29, más largo=0.002 s, promedio=0.001 s; distancia=294 kB, estimación=466 kB; lsn=0/1A1A6F0, lsn de redo=0/1A1A698
+2024-11-11 11:44:29.334 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:44:33.731 CET [7696] LOG:  checkpoint completo: escritos 41 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.363 s, sync=0.021 s, total=4.398 s; archivos sincronizados=23, más largo=0.003 s, promedio=0.001 s; distancia=201 kB, estimación=439 kB; lsn=0/1A4CD20, lsn de redo=0/1A4CCC8
+2024-11-11 11:44:39.778 CET [50228] ERROR:  error de sintaxis en o cerca de Â«FORÂ» en carÃ¡cter 92
+2024-11-11 11:44:39.778 CET [50228] SENTENCIA:  -- Itera por cada actividad para programar clases en el prÃ³ximo mes si no hay ninguna
+	    FOR rec IN SELECT DISTINCT actividad FROM horarios_mes_actual LOOP
+	        	   -- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	            FOR dia IN 
+	                SELECT fecha FROM dias_mes_siguiente
+	            LOOP
+	                -- Compara el dÃ­a de la semana de `dia.fecha` con `h.dia_semana` usando valores numÃ©ricos de 0 a 6 (domingo a sÃ¡bado)
+	                INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	                SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	                FROM horarios_mes_actual h
+	                JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	                WHERE h.actividad = rec.actividad
+	                AND EXTRACT(DOW FROM dia.fecha) = CASE h.dia_semana
+	                    WHEN 'DOMINGO' THEN 0
+	                    WHEN 'LUNES' THEN 1
+	                    WHEN 'MARTES' THEN 2
+	                    WHEN 'MIERCOLES' THEN 3
+	                    WHEN 'JUEVES' THEN 4
+	                    WHEN 'VIERNES' THEN 5
+	                    WHEN 'SABADO' THEN 6
+	                END
+2024-11-11 11:45:11.702 CET [50228] ERROR:  error de sintaxis en o cerca de Â«FORÂ» en carÃ¡cter 88
+2024-11-11 11:45:11.702 CET [50228] SENTENCIA:  -- Itera por cada actividad para programar clases en el prÃ³ximo mes si no hay ninguna
+	FOR rec IN SELECT DISTINCT actividad FROM horarios_mes_actual LOOP
+		-- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	    FOR dia IN 
+	        SELECT fecha FROM dias_mes_siguiente
+	    LOOP
+	        -- Compara el dÃ­a de la semana de `dia.fecha` con `h.dia_semana` usando valores numÃ©ricos de 0 a 6 (domingo a sÃ¡bado)
+	        INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	        SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	        FROM horarios_mes_actual h
+	        JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	        WHERE h.actividad = rec.actividad
+	        AND EXTRACT(DOW FROM dia.fecha) = CASE h.dia_semana
+	            WHEN 'DOMINGO' THEN 0
+	            WHEN 'LUNES' THEN 1
+	            WHEN 'MARTES' THEN 2
+	            WHEN 'MIERCOLES' THEN 3
+	            WHEN 'JUEVES' THEN 4
+	            WHEN 'VIERNES' THEN 5
+	            WHEN 'SABADO' THEN 6
+	        END
+2024-11-11 11:46:19.766 CET [50228] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«clase_pkeyÂ»
+2024-11-11 11:46:19.766 CET [50228] DETALLE:  Ya existe la llave (actividad, inicio, fecha)=(Boxeo, 11:00:00, 2024-12-02).
+2024-11-11 11:46:19.766 CET [50228] CONTEXTO:  sentencia SQL: Â«INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM horarios_mes_actual h
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad
+	            AND EXTRACT(DOW FROM dia.fecha) = CASE h.dia_semana
+	                WHEN 'DOMINGO' THEN 0
+	                WHEN 'LUNES' THEN 1
+	                WHEN 'MARTES' THEN 2
+	                WHEN 'MIERCOLES' THEN 3
+	                WHEN 'JUEVES' THEN 4
+	                WHEN 'VIERNES' THEN 5
+	                WHEN 'SABADO' THEN 6
+	            ENDÂ»
+	funciÃ³n PL/pgSQL inline_code_block en la lÃ­nea 11 en sentencia SQL
+2024-11-11 11:46:19.766 CET [50228] SENTENCIA:  -- Usa el lenguaje PL/pgSQL para el bloque DO
+	DO $$
+	DECLARE
+	    rec RECORD;
+	    dia RECORD;
+	BEGIN
+	    -- Itera por cada actividad para programar clases en el prÃ³ximo mes
+	    FOR rec IN (SELECT DISTINCT actividad FROM horarios_mes_actual) LOOP
+	        -- Itera sobre cada fecha del mes siguiente
+	        FOR dia IN (SELECT fecha FROM dias_mes_siguiente) LOOP
+	            -- Inserta las clases para el prÃ³ximo mes basadas en el horario del mes actual
+	            INSERT INTO sisinf_p2.CLASE (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	            SELECT dia.fecha, h.dia_semana, h.inicio, h.fin, a.plazas, h.actividad
+	            FROM horarios_mes_actual h
+	            JOIN sisinf_p2.ACTIVIDAD a ON a.nombre = h.actividad
+	            WHERE h.actividad = rec.actividad
+	            AND EXTRACT(DOW FROM dia.fecha) = CASE h.dia_semana
+	                WHEN 'DOMINGO' THEN 0
+	                WHEN 'LUNES' THEN 1
+	                WHEN 'MARTES' THEN 2
+	                WHEN 'MIERCOLES' THEN 3
+	                WHEN 'JUEVES' THEN 4
+	                WHEN 'VIERNES' THEN 5
+	                WHEN 'SABADO' THEN 6
+	            END;
+	        END LOOP;
+	    END LOOP;
+	END $$
+2024-11-11 11:49:29.740 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:49:30.534 CET [7696] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.768 s, sync=0.010 s, total=0.795 s; archivos sincronizados=8, más largo=0.003 s, promedio=0.002 s; distancia=25 kB, estimación=398 kB; lsn=0/1A53440, lsn de redo=0/1A533E8
+2024-11-11 11:54:29.547 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:54:32.633 CET [7696] LOG:  checkpoint completo: escritos 29 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.049 s, sync=0.023 s, total=3.086 s; archivos sincronizados=20, más largo=0.003 s, promedio=0.002 s; distancia=153 kB, estimación=374 kB; lsn=0/1A79BE8, lsn de redo=0/1A79B90
+2024-11-11 11:59:29.644 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 11:59:32.848 CET [7696] LOG:  checkpoint completo: escritos 30 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.171 s, sync=0.021 s, total=3.204 s; archivos sincronizados=17, más largo=0.003 s, promedio=0.002 s; distancia=153 kB, estimación=352 kB; lsn=0/1AA03E8, lsn de redo=0/1AA0358
+2024-11-11 12:04:29.860 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 12:04:30.868 CET [7696] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.984 s, sync=0.008 s, total=1.009 s; archivos sincronizados=6, más largo=0.003 s, promedio=0.002 s; distancia=35 kB, estimación=320 kB; lsn=0/1AA9170, lsn de redo=0/1AA9118
+2024-11-11 12:24:29.909 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 12:24:37.891 CET [7696] LOG:  checkpoint completo: escritos 74 búfers (0.5%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.945 s, sync=0.026 s, total=7.983 s; archivos sincronizados=29, más largo=0.003 s, promedio=0.001 s; distancia=451 kB, estimación=451 kB; lsn=0/1B1A150, lsn de redo=0/1B1A0C0
+2024-11-11 12:29:29.902 CET [7696] LOG:  empezando checkpoint: time
+2024-11-11 12:29:31.452 CET [7696] LOG:  checkpoint completo: escritos 15 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.525 s, sync=0.010 s, total=1.551 s; archivos sincronizados=7, más largo=0.004 s, promedio=0.002 s; distancia=76 kB, estimación=414 kB; lsn=0/1B2D148, lsn de redo=0/1B2D0F0

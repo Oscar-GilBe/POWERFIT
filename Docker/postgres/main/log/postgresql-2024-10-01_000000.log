@@ -1,0 +1,46 @@
+2024-10-02 19:19:42.474 CEST [37768] ERROR:  no existe la relación «pgagent.pga_job» en carácter 15
+2024-10-02 19:19:42.474 CEST [37768] SENTENCIA:  SELECT * FROM pgagent.pga_job
+2024-10-02 19:22:35.233 CEST [5256] LOG:  empezando checkpoint: time
+2024-10-02 19:22:35.807 CEST [5256] LOG:  checkpoint completo: escritos 6 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.544 s, sync=0.009 s, total=0.584 s; archivos sincronizados=6, m�s largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimaci�n=259 kB; lsn=0/15B64E0, lsn de redo=0/15B6488
+2024-10-02 19:46:51.721 CEST [9184] ERROR:  no existe el esquema «sisinf_p2» en carácter 14
+2024-10-02 19:46:51.721 CEST [9184] SENTENCIA:  CREATE TABLE sisinf_p2.ACTIVIDAD (
+		nombre VARCHAR(200),
+		grupo_muscular VARCHAR(200),
+		plazas	INTEGER CHECK (plazas > 0),
+		dificultad VARCHAR(200) CHECK (dificultad IN ('facil', 'media', 'dificil')),
+		material VARCHAR(200),
+		sala INTEGER REFERENCES sisinf_p2.SALA(numero),
+		monitor VARCHAR(200) REFERENCES sisinf_p2.MONITOR(correo),
+		PRIMARY KEY(nombre)
+	)
+2024-10-02 19:47:55.409 CEST [9184] ERROR:  no existe la relación «sisinf_p2.sala»
+2024-10-02 19:47:55.409 CEST [9184] SENTENCIA:  CREATE TABLE sisinf_p2.ACTIVIDAD (
+		nombre VARCHAR(200),
+		grupo_muscular VARCHAR(200),
+		plazas	INTEGER CHECK (plazas > 0),
+		dificultad VARCHAR(200) CHECK (dificultad IN ('facil', 'media', 'dificil')),
+		material VARCHAR(200),
+		sala INTEGER REFERENCES sisinf_p2.SALA(numero),
+		monitor VARCHAR(200) REFERENCES sisinf_p2.MONITOR(correo),
+		PRIMARY KEY(nombre)
+	)
+2024-10-02 19:48:22.052 CEST [9184] ERROR:  no existe la relación «sisinf_p2.usuario»
+2024-10-02 19:48:22.052 CEST [9184] SENTENCIA:  CREATE TABLE sisinf_p2.MONITOR (
+		correo	VARCHAR(200)  REFERENCES sisinf_p2.USUARIO(correo) ON DELETE CASCADE, -- Correo de la cuenta (clave extranjera y clave primaria)
+		PRIMARY KEY(correo)
+	)
+2024-10-02 19:49:34.765 CEST [9184] ERROR:  la relación «usuario» ya existe
+2024-10-02 19:49:34.765 CEST [9184] SENTENCIA:  CREATE TABLE sisinf_p2.USUARIO (
+		correo VARCHAR(200), -- Correo de la cuenta (clave primaria)
+		nombre VARCHAR(200) NOT NULL, -- Nombre de la persona
+		apellidos VARCHAR(200) NOT NULL, -- Apellidos de la persona
+		contrasena VARCHAR(200) NOT NULL, -- Contraseña de la cuenta
+		PRIMARY KEY(correo)
+	)
+2024-10-02 19:49:37.270 CEST [9184] ERROR:  la relación «administrador» ya existe
+2024-10-02 19:49:37.270 CEST [9184] SENTENCIA:  CREATE TABLE sisinf_p2.ADMINISTRADOR (
+		correo VARCHAR(200) REFERENCES sisinf_p2.USUARIO(correo) ON DELETE CASCADE, -- Correo de la cuenta (clave extranjera y clave primaria)
+		PRIMARY KEY(correo)
+	)
+2024-10-02 19:52:35.776 CEST [5256] LOG:  empezando checkpoint: time
+2024-10-02 19:52:43.651 CEST [5256] LOG:  checkpoint completo: escritos 73 b�fers (0.4%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=7.818 s, sync=0.042 s, total=7.875 s; archivos sincronizados=72, m�s largo=0.003 s, promedio=0.001 s; distancia=354 kB, estimaci�n=354 kB; lsn=0/160EEB0, lsn de redo=0/160EE20

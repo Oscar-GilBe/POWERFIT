@@ -1,0 +1,21 @@
+2024-11-22 17:00:58.722 CET [21904] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 13:10:55 CET
+2024-11-22 17:02:08.754 CET [21748] ERROR:  error de sintaxis en o cerca de «DROP» en carácter 74
+2024-11-22 17:02:08.754 CET [21748] SENTENCIA:  UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1'
+	DROP DATABASE template1;
+2024-11-22 17:02:18.884 CET [21748] ERROR:  no se puede borrar una base de datos patrón
+2024-11-22 17:02:18.884 CET [21748] SENTENCIA:  DROP DATABASE template1;
+2024-11-22 17:02:41.408 CET [18804] LOG:  empezando checkpoint: immediate force wait
+2024-11-22 17:02:41.434 CET [18804] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.006 s, sync=0.004 s, total=0.029 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.001 s; distancia=1 kB, estimación=1 kB; lsn=0/247B6B8, lsn de redo=0/247B660
+2024-11-22 17:07:41.437 CET [18804] LOG:  empezando checkpoint: time
+2024-11-22 17:08:45.971 CET [21748] ERROR:  parámetro de configuración «lc_collate» no reconocido
+2024-11-22 17:08:45.971 CET [21748] SENTENCIA:  ALTER DATABASE template0 SET lc_collate TO 'es_ES.UTF-8';
+2024-11-22 17:08:45.976 CET [21748] ERROR:  parámetro de configuración «lc_ctype» no reconocido
+2024-11-22 17:08:45.976 CET [21748] SENTENCIA:  ALTER DATABASE template0 SET lc_ctype TO 'es_ES.UTF-8';
+2024-11-22 17:09:01.822 CET [21748] ERROR:  parámetro de configuración «ctype» no reconocido
+2024-11-22 17:09:01.822 CET [21748] SENTENCIA:  ALTER DATABASE template0 SET Ctype TO 'es_ES.UTF-8';
+2024-11-22 17:09:26.038 CET [18804] LOG:  checkpoint completo: escritos 963 búfers (5.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=104.472 s, sync=0.121 s, total=104.601 s; archivos sincronizados=300, más largo=0.002 s, promedio=0.001 s; distancia=4533 kB, estimación=4533 kB; lsn=0/28E9410, lsn de redo=0/28E8C58
+2024-11-22 17:09:38.505 CET [18804] LOG:  empezando checkpoint: immediate force wait
+2024-11-22 17:09:38.515 CET [18804] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.003 s, total=0.011 s; archivos sincronizados=3, más largo=0.001 s, promedio=0.001 s; distancia=2 kB, estimación=4080 kB; lsn=0/28E9778, lsn de redo=0/28E9720
+2024-11-22 17:10:41.712 CET [18804] LOG:  apagando
+2024-11-22 17:10:41.714 CET [18804] LOG:  empezando checkpoint: shutdown immediate
+2024-11-22 17:10:41.892 CET [18804] LOG:  checkpoint completo: escritos 963 búfers (5.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.037 s, sync=0.134 s, total=0.180 s; archivos sincronizados=300, más largo=0.002 s, promedio=0.001 s; distancia=4534 kB, estimación=4534 kB; lsn=0/2D57080, lsn de redo=0/2D57080

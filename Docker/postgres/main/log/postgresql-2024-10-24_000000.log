@@ -1,0 +1,6 @@
+2024-10-24 19:29:06.924 CEST [20696] ERROR:  error de sintaxis en o cerca de «ASCENDING» en carácter 41
+2024-10-24 19:29:06.924 CEST [20696] SENTENCIA:  SELECT * from actividad ORDER BY nombre ASCENDING
+2024-10-24 19:29:25.327 CEST [20696] ERROR:  error de sintaxis en o cerca de «ASCENDING» en carácter 41
+2024-10-24 19:29:25.327 CEST [20696] SENTENCIA:  SELECT * from actividad ORDER BY nombre ASCENDING
+2024-10-24 19:35:09.332 CEST [30968] ERROR:  error de sintaxis en o cerca de «ASCENDING» en carácter 41
+2024-10-24 19:35:09.332 CEST [30968] SENTENCIA:  SELECT * from actividad ORDER BY nombre ASCENDING

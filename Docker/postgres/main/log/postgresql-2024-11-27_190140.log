@@ -1,0 +1,121 @@
+2024-11-27 19:01:40.564 CET [7800] LOG:  el sistema de bases de datos fue apagado en 2024-11-27 18:46:28 CET
+2024-11-27 19:06:40.570 CET [10952] LOG:  empezando checkpoint: time
+2024-11-27 19:06:42.975 CET [10952] LOG:  checkpoint completo: escritos 25 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.389 s, sync=0.005 s, total=2.407 s; archivos sincronizados=10, más largo=0.001 s, promedio=0.001 s; distancia=89 kB, estimación=89 kB; lsn=0/49765E0, lsn de redo=0/4976588
+2024-11-27 19:13:00.236 CET [27360] ERROR:  no existe la relación «clases» en carácter 564
+2024-11-27 19:13:00.236 CET [27360] SENTENCIA:  /*drop table sisinf_p2.RESENA;
+	drop table sisinf_p2.RESERVA;
+	drop table sisinf_p2.CLASE;
+	drop table sisinf_p2.ACTIVIDAD;
+	drop table sisinf_p2.SALA;
+	drop table sisinf_p2.MONITOR;
+	drop table sisinf_p2.CLIENTE;
+	drop table sisinf_p2.ADMINISTRADOR;
+	drop table sisinf_p2.USUARIO;*/
+	
+	-- Generar las clases para los lunes desde el 2024-11-25 hasta el 2024-12-31
+	WITH fechas_lunes AS (
+	    SELECT '2024-11-25'::date + (n * interval '1 week') AS fecha
+	    FROM generate_series(0, 5) AS n -- Genera los lunes en el rango
+	)
+	-- Insertar las clases
+	INSERT INTO clases (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	SELECT fecha, 
+	       'LUNES' AS dia_semana,
+	       horario.inicio,
+	       horario.fin,
+	       15 AS plazas_disponibles,
+	       horario.actividad
+	FROM fechas_lunes, LATERAL (
+	    VALUES
+	        ('08:00:00', '09:00:00', 'Spinning'),
+	        ('15:00:00', '16:00:00', 'Spinning'),
+	        ('09:00:00', '10:00:00', 'Pilates'),
+	        ('10:00:00', '11:00:00', 'GAP'),
+	        ('11:00:00', '12:00:00', 'Zumba'),
+	        ('12:00:00', '13:00:00', 'Yoga'),
+	        ('16:00:00', '17:00:00', 'Yoga'),
+	        ('17:00:00', '18:00:00', 'Total Body'),
+	        ('18:00:00', '19:00:00', 'Tai-Chi'),
+	        ('19:00:00', '20:00:00', 'TRX')
+	) AS horario(inicio, fin, actividad)
+2024-11-27 19:13:11.448 CET [27360] ERROR:  no existe la relación «clase» en carácter 564
+2024-11-27 19:13:11.448 CET [27360] SENTENCIA:  /*drop table sisinf_p2.RESENA;
+	drop table sisinf_p2.RESERVA;
+	drop table sisinf_p2.CLASE;
+	drop table sisinf_p2.ACTIVIDAD;
+	drop table sisinf_p2.SALA;
+	drop table sisinf_p2.MONITOR;
+	drop table sisinf_p2.CLIENTE;
+	drop table sisinf_p2.ADMINISTRADOR;
+	drop table sisinf_p2.USUARIO;*/
+	
+	-- Generar las clases para los lunes desde el 2024-11-25 hasta el 2024-12-31
+	WITH fechas_lunes AS (
+	    SELECT '2024-11-25'::date + (n * interval '1 week') AS fecha
+	    FROM generate_series(0, 5) AS n -- Genera los lunes en el rango
+	)
+	-- Insertar las clases
+	INSERT INTO clase (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	SELECT fecha, 
+	       'LUNES' AS dia_semana,
+	       horario.inicio,
+	       horario.fin,
+	       15 AS plazas_disponibles,
+	       horario.actividad
+	FROM fechas_lunes, LATERAL (
+	    VALUES
+	        ('08:00:00', '09:00:00', 'Spinning'),
+	        ('15:00:00', '16:00:00', 'Spinning'),
+	        ('09:00:00', '10:00:00', 'Pilates'),
+	        ('10:00:00', '11:00:00', 'GAP'),
+	        ('11:00:00', '12:00:00', 'Zumba'),
+	        ('12:00:00', '13:00:00', 'Yoga'),
+	        ('16:00:00', '17:00:00', 'Yoga'),
+	        ('17:00:00', '18:00:00', 'Total Body'),
+	        ('18:00:00', '19:00:00', 'Tai-Chi'),
+	        ('19:00:00', '20:00:00', 'TRX')
+	) AS horario(inicio, fin, actividad)
+2024-11-27 19:13:23.331 CET [27360] ERROR:  la columna «inicio» es de tipo time without time zone pero la expresión es de tipo text en carácter 699
+2024-11-27 19:13:23.331 CET [27360] HINT:  Necesitará reescribir la expresión o aplicarle una conversión de tipo.
+2024-11-27 19:13:23.331 CET [27360] SENTENCIA:  /*drop table sisinf_p2.RESENA;
+	drop table sisinf_p2.RESERVA;
+	drop table sisinf_p2.CLASE;
+	drop table sisinf_p2.ACTIVIDAD;
+	drop table sisinf_p2.SALA;
+	drop table sisinf_p2.MONITOR;
+	drop table sisinf_p2.CLIENTE;
+	drop table sisinf_p2.ADMINISTRADOR;
+	drop table sisinf_p2.USUARIO;*/
+	
+	-- Generar las clases para los lunes desde el 2024-11-25 hasta el 2024-12-31
+	WITH fechas_lunes AS (
+	    SELECT '2024-11-25'::date + (n * interval '1 week') AS fecha
+	    FROM generate_series(0, 5) AS n -- Genera los lunes en el rango
+	)
+	-- Insertar las clases
+	INSERT INTO sisinf_p2.clase (fecha, dia_semana, inicio, fin, plazas_disponibles, actividad)
+	SELECT fecha, 
+	       'LUNES' AS dia_semana,
+	       horario.inicio,
+	       horario.fin,
+	       15 AS plazas_disponibles,
+	       horario.actividad
+	FROM fechas_lunes, LATERAL (
+	    VALUES
+	        ('08:00:00', '09:00:00', 'Spinning'),
+	        ('15:00:00', '16:00:00', 'Spinning'),
+	        ('09:00:00', '10:00:00', 'Pilates'),
+	        ('10:00:00', '11:00:00', 'GAP'),
+	        ('11:00:00', '12:00:00', 'Zumba'),
+	        ('12:00:00', '13:00:00', 'Yoga'),
+	        ('16:00:00', '17:00:00', 'Yoga'),
+	        ('17:00:00', '18:00:00', 'Total Body'),
+	        ('18:00:00', '19:00:00', 'Tai-Chi'),
+	        ('19:00:00', '20:00:00', 'TRX')
+	) AS horario(inicio, fin, actividad)
+2024-11-27 19:16:01.455 CET [27360] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 19:16:01.459 CET [28324] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 19:16:01.460 CET [11736] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-27 19:16:01.472 CET [10952] LOG:  apagando
+2024-11-27 19:16:01.474 CET [10952] LOG:  empezando checkpoint: shutdown immediate
+2024-11-27 19:16:01.491 CET [10952] LOG:  checkpoint completo: escritos 14 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.007 s, total=0.020 s; archivos sincronizados=8, más largo=0.002 s, promedio=0.001 s; distancia=67 kB, estimación=86 kB; lsn=0/49872C8, lsn de redo=0/49872C8

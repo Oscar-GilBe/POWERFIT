@@ -1,0 +1,12 @@
+2024-11-26 21:16:47.651 CET [8900] LOG:  el sistema de bases de datos fue apagado en 2024-11-26 20:33:28 CET
+2024-11-26 21:17:36.201 CET [15072] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-11-26 21:17:36.201 CET [15072] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/17/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2024-11-26 21:19:19.319 CET [2760] ERROR:  update o delete en «monitor» viola la llave foránea «actividad_monitor_fkey» en la tabla «actividad»
+2024-11-26 21:19:19.319 CET [2760] DETALLE:  La llave (correo)=(monitor1@powerfit.com) todavía es referida desde la tabla «actividad».
+2024-11-26 21:19:19.319 CET [2760] SENTENCIA:  DELETE FROM usuario WHERE correo = 'monitor1@powerfit.com';
+2024-11-26 21:21:47.649 CET [15896] LOG:  empezando checkpoint: time
+2024-11-26 21:21:48.002 CET [15896] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.325 s, sync=0.015 s, total=0.363 s; archivos sincronizados=5, más largo=0.013 s, promedio=0.003 s; distancia=9 kB, estimación=9 kB; lsn=0/3FA7EA8, lsn de redo=0/3FA7E50
+2024-11-26 21:22:27.200 CET [2760] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-26 21:22:27.217 CET [15896] LOG:  apagando
+2024-11-26 21:22:27.218 CET [15896] LOG:  empezando checkpoint: shutdown immediate
+2024-11-26 21:22:27.225 CET [15896] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.008 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=8 kB; lsn=0/3FA7F58, lsn de redo=0/3FA7F58

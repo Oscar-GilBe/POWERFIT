@@ -1,0 +1,27 @@
+2024-11-01 17:46:20.191 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 17:46:20.550 CET [7696] LOG:  checkpoint completo: escritos 4 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.338 s, sync=0.005 s, total=0.366 s; archivos sincronizados=4, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=4 kB; lsn=0/16C4688, lsn de redo=0/16C4630
+2024-11-01 17:51:20.565 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 17:51:20.801 CET [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.224 s, sync=0.004 s, total=0.236 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=4 kB; lsn=0/16C4DC0, lsn de redo=0/16C4D68
+2024-11-01 23:26:54.440 CET [51544] ERROR:  el valor nulo en la columna Â«clienteÂ» de la relaciÃ³n Â«reservaÂ» viola la restricciÃ³n de no nulo
+2024-11-01 23:26:54.440 CET [51544] DETALLE:  La fila que falla contiene (null, pilates, 2024-11-06, null, 15:00:00).
+2024-11-01 23:26:54.440 CET [51544] SENTENCIA:  INSERT INTO Reserva (cliente, actividad, fecha, hora) VALUES ($1, $2, $3, $4)
+2024-11-01 23:28:13.390 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 23:28:13.864 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.445 s, sync=0.007 s, total=0.478 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=4 kB; lsn=0/16C55B0, lsn de redo=0/16C5520
+2024-11-01 23:37:42.648 CET [48900] ERROR:  no hay restricciÃ³n unique que coincida con las columnas dadas en la tabla referida Â«claseÂ»
+2024-11-01 23:37:42.648 CET [48900] SENTENCIA:  CREATE TABLE sisinf_p2.RESERVA (
+		cliente	VARCHAR(200)  REFERENCES sisinf_p2.CLIENTE(correo) ON DELETE CASCADE,
+		actividad VARCHAR(200),
+		fecha DATE,
+		hora TIME,
+		PRIMARY KEY(cliente,actividad,fecha,hora),
+		FOREIGN KEY(actividad,fecha,hora) REFERENCES sisinf_p2.CLASE(actividad,fecha,inicio)
+	)
+2024-11-01 23:38:13.901 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 23:38:17.660 CET [7696] LOG:  checkpoint completo: escritos 35 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.709 s, sync=0.035 s, total=3.760 s; archivos sincronizados=30, más largo=0.003 s, promedio=0.002 s; distancia=176 kB, estimación=176 kB; lsn=0/16F17E0, lsn de redo=0/16F1788
+2024-11-01 23:43:13.673 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 23:43:18.715 CET [7696] LOG:  checkpoint completo: escritos 47 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.008 s, sync=0.023 s, total=5.043 s; archivos sincronizados=32, más largo=0.004 s, promedio=0.001 s; distancia=252 kB, estimación=252 kB; lsn=0/1730900, lsn de redo=0/1730870
+2024-11-01 23:43:21.071 CET [34052] ERROR:  el valor nulo en la columna Â«clienteÂ» de la relaciÃ³n Â«reservaÂ» viola la restricciÃ³n de no nulo
+2024-11-01 23:43:21.071 CET [34052] DETALLE:  La fila que falla contiene (null, pilates, 2024-11-04, 08:00:00).
+2024-11-01 23:43:21.071 CET [34052] SENTENCIA:  INSERT INTO Reserva (cliente, actividad, fecha, hora) VALUES ($1, $2, $3, $4)
+2024-11-01 23:48:13.727 CET [7696] LOG:  empezando checkpoint: time
+2024-11-01 23:48:14.279 CET [7696] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.538 s, sync=0.005 s, total=0.553 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.001 s; distancia=3 kB, estimación=227 kB; lsn=0/17316E0, lsn de redo=0/1731688

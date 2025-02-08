@@ -1,0 +1,26 @@
+2024-10-22 19:44:47.337 CEST [26748] ERROR:  inserción o actualización en la tabla «monitor» viola la llave foránea «monitor_correo_fkey»
+2024-10-22 19:44:47.337 CEST [26748] DETALLE:  La llave (correo)=(monitor1@powerfit.com) no está presente en la tabla «usuario».
+2024-10-22 19:44:47.337 CEST [26748] SENTENCIA:  INSERT INTO sisinf_p2.MONITOR (correo) 
+	VALUES ('monitor1@powerfit.com')
+2024-10-22 19:46:07.938 CEST [26748] ERROR:  llave duplicada viola restricción de unicidad «sala_pkey»
+2024-10-22 19:46:07.938 CEST [26748] DETALLE:  Ya existe la llave (numero)=(1).
+2024-10-22 19:46:07.938 CEST [26748] SENTENCIA:  INSERT INTO sisinf_p2.SALA (numero) 
+	VALUES (1)
+2024-10-22 19:47:31.199 CEST [26748] ERROR:  llave duplicada viola restricción de unicidad «usuario_pkey»
+2024-10-22 19:47:31.199 CEST [26748] DETALLE:  Ya existe la llave (correo)=(monitor1@powerfit.com).
+2024-10-22 19:47:31.199 CEST [26748] SENTENCIA:  /*delete from sisinf_p2.usuario where correo = 'b.a.ruben26@gmail.com'*/
+	INSERT INTO sisinf_p2.USUARIO (nombre, apellidos, correo, contrasena) 
+	VALUES ('monitor1', 'apellidos', 'monitor1@powerfit.com', 'power_fit_mola')
+2024-10-22 19:48:58.000 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-22 19:48:59.652 CEST [7696] LOG:  checkpoint completo: escritos 16 b�fers (0.1%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=1.634 s, sync=0.009 s, total=1.656 s; archivos sincronizados=12, m�s largo=0.002 s, promedio=0.001 s; distancia=5 kB, estimaci�n=11 kB; lsn=0/16B5D00, lsn de redo=0/16B5CA8
+2024-10-22 19:53:57.648 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-22 19:53:58.087 CEST [7696] LOG:  checkpoint completo: escritos 5 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.427 s, sync=0.006 s, total=0.440 s; archivos sincronizados=5, m�s largo=0.003 s, promedio=0.002 s; distancia=2 kB, estimaci�n=10 kB; lsn=0/16B6598, lsn de redo=0/16B6540
+2024-10-22 20:09:23.819 CEST [26748] ERROR:  error de sintaxis en o cerca de «ASCENDING» en carácter 135
+2024-10-22 20:09:23.819 CEST [26748] SENTENCIA:  SELECT * from clase WHERE actividad = 'pilates' AND clase.fecha <= '2024-11-03'  AND clase.fecha >= '2024-10-28' ORDER BY clase.fecha ASCENDING
+	
+2024-10-22 20:09:35.889 CEST [26748] ERROR:  error de sintaxis en o cerca de «ASCENDING» en carácter 135
+2024-10-22 20:09:35.889 CEST [26748] SENTENCIA:  SELECT * from clase WHERE actividad = 'pilates' AND clase.fecha <= '2024-11-03'  AND clase.fecha >= '2024-10-28' ORDER BY clase.fecha ASCENDING
+2024-10-22 20:10:22.659 CEST [26748] ERROR:  no existe la relación «clase» en carácter 15
+2024-10-22 20:10:22.659 CEST [26748] SENTENCIA:  SELECT * from clase WHERE actividad = 'pilates' AND clase.fecha <= '2024-11-03'  AND clase.fecha >= '2024-10-28' ORDER BY clase.fecha ASC
+2024-10-22 20:13:57.071 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-22 20:13:57.306 CEST [7696] LOG:  checkpoint completo: escritos 2 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.220 s, sync=0.003 s, total=0.236 s; archivos sincronizados=2, m�s largo=0.002 s, promedio=0.002 s; distancia=8 kB, estimaci�n=10 kB; lsn=0/16B87D8, lsn de redo=0/16B8780

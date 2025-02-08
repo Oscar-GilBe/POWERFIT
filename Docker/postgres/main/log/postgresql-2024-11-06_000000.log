@@ -1,0 +1,26 @@
+2024-11-06 21:18:33.149 CET [30668] ERROR:  el nuevo registro para la relaciÃ³n Â«resenaÂ» viola la restricciÃ³n Â«checkÂ» Â«resena_puntuacion_checkÂ»
+2024-11-06 21:18:33.149 CET [30668] DETALLE:  La fila que falla contiene (0, asdfghjk, b.a.ruben26@gmail.com, Boxeo).
+2024-11-06 21:18:33.149 CET [30668] SENTENCIA:  INSERT INTO resena (puntuacion, texto, cliente, actividad) VALUES ($1, $2, $3, $4)
+2024-11-06 21:21:34.404 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 21:21:34.860 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.439 s, sync=0.005 s, total=0.458 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=4 kB, estimación=166 kB; lsn=0/17347E8, lsn de redo=0/1734790
+2024-11-06 21:24:02.634 CET [26340] ERROR:  el nuevo registro para la relaciÃ³n Â«resenaÂ» viola la restricciÃ³n Â«checkÂ» Â«resena_puntuacion_checkÂ»
+2024-11-06 21:24:02.634 CET [26340] DETALLE:  La fila que falla contiene (0, wsdfghioeejpoqjpegj, b.a.ruben26@gmail.com, Boxeo).
+2024-11-06 21:24:02.634 CET [26340] SENTENCIA:  INSERT INTO resena (puntuacion, texto, cliente, actividad) VALUES ($1, $2, $3, $4)
+2024-11-06 21:26:32.903 CET [26340] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«resena_pkeyÂ»
+2024-11-06 21:26:32.903 CET [26340] DETALLE:  Ya existe la llave (cliente, actividad)=(b.a.ruben26@gmail.com, Boxeo).
+2024-11-06 21:26:32.903 CET [26340] SENTENCIA:  INSERT INTO resena (puntuacion, texto, cliente, actividad) VALUES ($1, $2, $3, $4)
+2024-11-06 21:26:34.870 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 21:26:35.001 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.114 s, sync=0.004 s, total=0.131 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=150 kB; lsn=0/1734EC8, lsn de redo=0/1734E70
+2024-11-06 22:11:08.591 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 22:11:08.719 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.111 s, sync=0.002 s, total=0.129 s; archivos sincronizados=2, más largo=0.002 s, promedio=0.001 s; distancia=1 kB, estimación=135 kB; lsn=0/1735660, lsn de redo=0/1735608
+2024-11-06 22:16:08.725 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 22:16:09.186 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.440 s, sync=0.007 s, total=0.461 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=5 kB, estimación=122 kB; lsn=0/1736DA0, lsn de redo=0/1736D48
+2024-11-06 22:16:31.968 CET [49276] ERROR:  el nuevo registro para la relaciÃ³n Â«resenaÂ» viola la restricciÃ³n Â«checkÂ» Â«resena_puntuacion_checkÂ»
+2024-11-06 22:16:31.968 CET [49276] DETALLE:  La fila que falla contiene (0, Una actividad que recomiendo a todo aquel que quiera centrarse e..., b.a.ruben26@gmail.com, Yoga).
+2024-11-06 22:16:31.968 CET [49276] SENTENCIA:  INSERT INTO resena (puntuacion, texto, cliente, actividad) VALUES ($1, $2, $3, $4)
+2024-11-06 22:21:08.188 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 22:21:08.645 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.441 s, sync=0.005 s, total=0.457 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=5 kB, estimación=110 kB; lsn=0/17384E8, lsn de redo=0/1738490
+2024-11-07 16:08:56.787 CET [49276] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-07 17:42:33.020 CET [7696] LOG:  empezando checkpoint: time
+2024-11-07 17:42:33.148 CET [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.107 s, sync=0.005 s, total=0.132 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.003 s; distancia=2 kB, estimación=100 kB; lsn=0/1738F38, lsn de redo=0/1738EE0

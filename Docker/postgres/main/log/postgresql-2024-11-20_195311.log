@@ -1,0 +1,75 @@
+2024-11-20 19:53:11.296 CET [7216] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-11-20 17:16:57 CET
+2024-11-20 19:53:14.457 CET [7216] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-11-20 19:53:14.464 CET [7216] LOG:  redo comienza en 0/1F6EED0
+2024-11-20 19:53:14.464 CET [7216] LOG:  largo de registro no válido en 0/1F6EF08: se esperaba al menos 24, se obtuvo 0
+2024-11-20 19:53:14.464 CET [7216] LOG:  redo listo en 0/1F6EED0 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-11-20 19:53:14.472 CET [7192] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-11-20 19:53:14.488 CET [7192] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.021 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=0/1F6EF08, lsn de redo=0/1F6EF08
+2024-11-21 17:15:22.157 CET [8148] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:15:40.455 CET [16220] ERROR:  no se puede eliminar la base de datos activa
+2024-11-21 17:15:40.455 CET [16220] SENTENCIA:  DROP DATABASE postgres
+2024-11-21 17:16:21.588 CET [16944] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:16:21.620 CET [16220] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:16:21.620 CET [16220] SENTENCIA:  SELECT pg_terminate_backend(16220)
+2024-11-21 17:16:21.866 CET [13416] WARNING:  PID 16220 no es un proceso servidor de PostgreSQL
+2024-11-21 17:16:47.269 CET [13416] ERROR:  no se puede eliminar la base de datos activa
+2024-11-21 17:16:47.269 CET [13416] SENTENCIA:  DROP DATABASE postgres
+2024-11-21 17:18:45.599 CET [1072] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:18:45.619 CET [6852] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:18:45.971 CET [13416] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 17:18:45.971 CET [13416] SENTENCIA:  SELECT pg_terminate_backend(13416)
+	FROM pg_stat_activity
+	WHERE datname = 'postgres'
+2024-11-21 17:18:46.227 CET [5332] WARNING:  PID 13416 no es un proceso servidor de PostgreSQL
+2024-11-21 17:18:46.227 CET [5332] WARNING:  PID 13416 no es un proceso servidor de PostgreSQL
+2024-11-21 17:18:46.227 CET [5332] WARNING:  PID 13416 no es un proceso servidor de PostgreSQL
+2024-11-21 17:30:51.396 CET [16760] ERROR:  la base de datos Â«postgresÂ» ya existe
+2024-11-21 17:30:51.396 CET [16760] SENTENCIA:  CREATE DATABASE postgres
+	WITH ENCODING='UTF8'
+	LC_COLLATE='es_ES.UTF-8'
+	LC_CTYPE='es_ES.UTF-8'
+	template=template0
+2024-11-21 17:32:01.372 CET [7192] LOG:  empezando checkpoint: time
+2024-11-21 17:32:01.641 CET [7192] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.227 s, sync=0.003 s, total=0.277 s; archivos sincronizados=1, más largo=0.003 s, promedio=0.003 s; distancia=10 kB, estimación=10 kB; lsn=0/1F718E0, lsn de redo=0/1F71888
+2024-11-21 17:48:17.880 CET [17744] FATAL:  la autentificación password falló para el usuario «barub»
+2024-11-21 17:48:17.880 CET [17744] DETALLE:  No existe el rol «barub».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/17/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2024-11-21 17:48:29.395 CET [15424] FATAL:  la autentificación password falló para el usuario «barub»
+2024-11-21 17:48:29.395 CET [15424] DETALLE:  No existe el rol «barub».
+	La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/17/data/pg_hba.conf» línea 117: «host    all             all             ::1/128                 scram-sha-256»
+2024-11-21 17:50:46.446 CET [7192] LOG:  empezando checkpoint: immediate force wait
+2024-11-21 17:50:46.461 CET [7192] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.017 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=1 kB, estimación=9 kB; lsn=0/1F71E28, lsn de redo=0/1F71DD0
+2024-11-21 17:55:46.474 CET [7192] LOG:  empezando checkpoint: time
+2024-11-21 17:55:58.774 CET [8504] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 17:57:30.791 CET [7192] LOG:  checkpoint completo: escritos 963 búfers (5.9%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=104.081 s, sync=0.214 s, total=104.318 s; archivos sincronizados=300, más largo=0.005 s, promedio=0.001 s; distancia=4533 kB, estimación=4533 kB; lsn=0/23DF2E8, lsn de redo=0/23DF258
+2024-11-21 18:00:46.847 CET [7192] LOG:  empezando checkpoint: time
+2024-11-21 18:00:51.029 CET [7192] LOG:  checkpoint completo: escritos 39 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.122 s, sync=0.045 s, total=4.183 s; archivos sincronizados=35, más largo=0.005 s, promedio=0.002 s; distancia=148 kB, estimación=4094 kB; lsn=0/2404570, lsn de redo=0/2404518
+2024-11-21 18:06:42.451 CET [18168] ERROR:  no existe el esquema Â«sisinf_p2Â» en carÃ¡cter 14
+2024-11-21 18:06:42.451 CET [18168] SENTENCIA:  CREATE TABLE sisinf_p2.SALA (
+		numero INTEGER CHECK (numero > 0),
+		PRIMARY KEY(numero)
+	);
+2024-11-21 18:07:54.161 CET [18168] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:10:46.059 CET [7192] LOG:  empezando checkpoint: time
+2024-11-21 18:10:53.906 CET [7192] LOG:  checkpoint completo: escritos 73 búfers (0.4%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=7.800 s, sync=0.036 s, total=7.848 s; archivos sincronizados=64, más largo=0.002 s, promedio=0.001 s; distancia=345 kB, estimación=3719 kB; lsn=0/245AB80, lsn de redo=0/245AAF0
+2024-11-21 18:13:23.440 CET [11936] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:13:44.845 CET [8796] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:14:17.226 CET [6168] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:14:26.424 CET [5068] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:15:36.774 CET [9920] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-21 18:15:46.919 CET [7192] LOG:  empezando checkpoint: time
+2024-11-21 18:15:51.531 CET [7192] LOG:  checkpoint completo: escritos 43 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.576 s, sync=0.026 s, total=4.613 s; archivos sincronizados=27, más largo=0.003 s, promedio=0.001 s; distancia=122 kB, estimación=3360 kB; lsn=0/24794B8, lsn de redo=0/2479460
+2024-11-21 18:20:11.406 CET [4040] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 18:20:11.413 CET [11704] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 18:20:11.413 CET [16288] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 18:20:11.414 CET [5028] FATAL:  terminando la conexiÃ³n debido a una orden del administrador
+2024-11-21 18:20:11.454 CET [7192] LOG:  apagando
+2024-11-21 18:20:11.456 CET [7192] LOG:  empezando checkpoint: shutdown immediate
+2024-11-21 18:20:11.471 CET [7192] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.001 s, total=0.017 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=3024 kB; lsn=0/2479568, lsn de redo=0/2479568

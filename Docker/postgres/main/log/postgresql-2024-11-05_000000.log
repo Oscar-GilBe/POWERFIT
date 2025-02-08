@@ -1,0 +1,71 @@
+2024-11-05 17:17:46.584 CET [21612] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-06 18:53:47.541 CET [16712] ERROR:  el valor nulo en la columna «correo» de la relación «administrador» viola la restricción de no nulo
+2024-11-06 18:53:47.541 CET [16712] DETALLE:  La fila que falla contiene (null).
+2024-11-06 18:53:47.541 CET [16712] SENTENCIA:  INSERT INTO sisinf_p2.administrador DEFAULT VALUES
+2024-11-06 18:56:34.258 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 18:56:34.849 CET [7696] LOG:  checkpoint completo: escritos 6 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.557 s, sync=0.008 s, total=0.599 s; archivos sincronizados=5, m�s largo=0.003 s, promedio=0.002 s; distancia=2 kB, estimaci�n=204 kB; lsn=0/1732100, lsn de redo=0/17320A8
+2024-11-06 19:49:03.629 CET [54944] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 19:49:03.629 CET [54944] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 19:49:07.828 CET [54944] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 19:49:07.828 CET [54944] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 19:49:09.766 CET [54944] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 19:49:09.766 CET [54944] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:16:34.884 CET [7696] LOG:  empezando checkpoint: time
+2024-11-06 20:16:35.343 CET [7696] LOG:  checkpoint completo: escritos 5 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.441 s, sync=0.006 s, total=0.461 s; archivos sincronizados=5, m�s largo=0.003 s, promedio=0.002 s; distancia=4 kB, estimaci�n=184 kB; lsn=0/1733428, lsn de redo=0/17333D0
+2024-11-06 20:20:29.265 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:20:29.265 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:20:31.099 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:20:31.099 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:20:32.483 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:20:32.483 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:20:41.576 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:20:41.576 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:47.155 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:47.155 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:48.303 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:48.303 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:48.769 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:48.769 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:48.914 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:48.914 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:49.052 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:49.052 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:49.198 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:49.198 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:22:49.321 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:22:49.321 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:27:49.187 CET [17256] ERROR:  no existe la columna resena.nombre en carácter 59
+2024-11-06 20:27:49.187 CET [17256] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.nombre
+2024-11-06 20:29:03.265 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:03.265 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:06.301 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:06.301 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:07.772 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:07.772 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:08.321 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:08.321 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:08.700 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:08.700 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:09.014 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:09.014 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:09.346 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:09.346 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:09.593 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:09.593 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:09.789 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:09.789 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:09.971 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:09.971 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:10.142 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:10.142 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:10.312 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:10.312 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:10.451 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:10.451 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:10.598 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:10.598 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:53.409 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:53.409 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo
+2024-11-06 20:29:54.135 CET [16988] ERROR:  no existe la columna resena.correo en carácter 59
+2024-11-06 20:29:54.135 CET [16988] SENTENCIA:  SELECT * FROM resena WHERE resena.actividad = $1 order by resena.correo

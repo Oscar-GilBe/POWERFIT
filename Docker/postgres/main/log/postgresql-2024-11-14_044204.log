@@ -1,0 +1,70 @@
+2024-11-14 04:42:04.676 CET [6456] LOG:  el sistema de bases de datos fue apagado en 2024-11-14 04:41:39 CET
+2024-11-14 04:47:04.661 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 04:47:04.686 CET [6432] LOG:  checkpoint completo: escritos 3 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.002 s, total=0.030 s; archivos sincronizados=2, m�s largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimaci�n=0 kB; lsn=0/1C67520, lsn de redo=0/1C674C8
+2024-11-14 19:11:27.891 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 19:11:28.451 CET [6432] LOG:  checkpoint completo: escritos 6 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.544 s, sync=0.004 s, total=0.565 s; archivos sincronizados=5, m�s largo=0.002 s, promedio=0.001 s; distancia=9 kB, estimaci�n=9 kB; lsn=0/1C69A30, lsn de redo=0/1C699A0
+2024-11-14 19:21:27.472 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 19:21:29.232 CET [6432] LOG:  checkpoint completo: escritos 16 b�fers (0.1%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=1.739 s, sync=0.008 s, total=1.761 s; archivos sincronizados=6, m�s largo=0.004 s, promedio=0.002 s; distancia=17 kB, estimaci�n=17 kB; lsn=0/1C6E128, lsn de redo=0/1C6E0D0
+2024-11-14 19:26:27.245 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 19:26:27.376 CET [6432] LOG:  checkpoint completo: escritos 2 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.117 s, sync=0.003 s, total=0.132 s; archivos sincronizados=2, m�s largo=0.002 s, promedio=0.002 s; distancia=3 kB, estimaci�n=16 kB; lsn=0/1C6EFC8, lsn de redo=0/1C6EF70
+2024-11-14 20:44:29.740 CET [4380] ERROR:  llave duplicada viola restricción de unicidad «sala_pkey»
+2024-11-14 20:44:29.740 CET [4380] DETALLE:  Ya existe la llave (numero)=(9).
+2024-11-14 20:44:29.740 CET [4380] SENTENCIA:  INSERT INTO sala (numero) VALUES ($1)
+2024-11-14 20:46:27.476 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 20:46:27.716 CET [6432] LOG:  checkpoint completo: escritos 3 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.213 s, sync=0.005 s, total=0.242 s; archivos sincronizados=3, m�s largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimaci�n=14 kB; lsn=0/1C6F538, lsn de redo=0/1C6F4E0
+2024-11-14 20:55:01.652 CET [11336] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:55:01.652 CET [11336] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:55:31.564 CET [11336] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:55:31.564 CET [11336] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:55:45.589 CET [11336] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:55:45.589 CET [11336] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:56:27.736 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 20:56:27.971 CET [6432] LOG:  checkpoint completo: escritos 3 b�fers (0.0%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=0.222 s, sync=0.004 s, total=0.236 s; archivos sincronizados=3, m�s largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimaci�n=13 kB; lsn=0/1C6FBD8, lsn de redo=0/1C6FB80
+2024-11-14 20:56:55.501 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:56:55.501 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:58:00.885 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:58:00.885 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:58:04.994 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:58:04.994 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:58:07.460 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:58:07.460 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:58:11.879 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:58:11.879 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:59:10.586 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:59:10.586 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:59:15.521 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:59:15.521 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 20:59:46.487 CET [7508] ERROR:  error de sintaxis en o cerca de «.» en carácter 145
+2024-11-14 20:59:46.487 CET [7508] SENTENCIA:  SELECT clase.fecha, clase.dia_semana, clase.inicio, clase.finclase.plazas_disponibles, clase.actividad FROM clase, actividad, monitorWHERE clase.actividad = actividad.nombre AND actividad.monitor = $1
+2024-11-14 21:04:08.237 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:04:08.237 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 35, FACIL, Esterilla, 10, monitor6@powerfit.com, null).
+2024-11-14 21:04:08.237 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:05:46.173 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:05:46.173 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 35, FACIL, Esterilla, 10, monitor6@powerfit.com, null).
+2024-11-14 21:05:46.173 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:05:53.989 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:05:53.989 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 35, FACIL, Esterilla, 10, monitor6@powerfit.com, null).
+2024-11-14 21:05:53.989 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:06:05.701 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:06:05.701 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 35, FACIL, Esterilla, 10, monitor6@powerfit.com, null).
+2024-11-14 21:06:05.701 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:06:23.982 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:06:23.982 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 20, FACIL, Esterilla, 5, monitor6@powerfit.com, null).
+2024-11-14 21:06:23.982 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:06:27.985 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 21:06:41.908 CET [6824] ERROR:  el valor nulo en la columna «imagen» de la relación «actividad» viola la restricción de no nulo
+2024-11-14 21:06:41.908 CET [6824] DETALLE:  La fila que falla contiene (pilates, Total Body, 20, FACIL, Esterilla, 5, monitor6@powerfit.com, null).
+2024-11-14 21:06:41.908 CET [6824] SENTENCIA:  UPDATE actividad SET grupo_muscular = $1, plazas = $2, dificultad = $3, material = $4, sala = $5, monitor = $6, imagen = $7 WHERE nombre = $8
+2024-11-14 21:06:48.477 CET [6432] LOG:  checkpoint completo: escritos 189 b�fers (1.2%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=20.475 s, sync=0.007 s, total=20.493 s; archivos sincronizados=12, m�s largo=0.002 s, promedio=0.001 s; distancia=201 kB, estimaci�n=201 kB; lsn=0/1CA2210, lsn de redo=0/1CA2180
+2024-11-14 21:11:27.480 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 21:11:47.348 CET [6432] LOG:  checkpoint completo: escritos 183 b�fers (1.1%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=19.850 s, sync=0.009 s, total=19.869 s; archivos sincronizados=9, m�s largo=0.002 s, promedio=0.001 s; distancia=1456 kB, estimaci�n=1456 kB; lsn=0/1E0E260, lsn de redo=0/1E0E1D0
+2024-11-14 21:16:27.350 CET [6432] LOG:  empezando checkpoint: time
+2024-11-14 21:16:38.916 CET [6432] LOG:  checkpoint completo: escritos 107 b�fers (0.7%); 0 archivos WAL a�adidos, 0 eliminados, 0 reciclados; write=11.535 s, sync=0.017 s, total=11.566 s; archivos sincronizados=16, m�s largo=0.003 s, promedio=0.002 s; distancia=1409 kB, estimaci�n=1451 kB; lsn=0/1F6EA38, lsn de redo=0/1F6E9A8
+2024-11-15 08:45:48.352 CET [15488] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-15 08:45:48.352 CET [13668] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-15 08:45:50.663 CET [4552] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-15 08:45:50.676 CET [14980] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
