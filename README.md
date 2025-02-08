@@ -2,7 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/2a37eaf1-e2d4-4274-8ca5-75a12dcd1ca9)
 
-**POWERFIT** es un sistema de información diseñado para gestionar y reservar actividades en el gimnasio. La aplicación está pensada para tres tipos de usuarios:
+**POWERFIT** es un sistema de información diseñado para gestionar y reservar las actividades de un gimnasio. La aplicación está pensada para tres tipos de usuarios:
 
 - **Cliente**
 - **Monitor**
