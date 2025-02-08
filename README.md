@@ -99,4 +99,43 @@ Cada rol tiene funcionalidades específicas que se detallan a continuación.
   
 - **Estadísticas del Gimnasio**
   - El sistema permitirá consultar las estadísticas del gimnasio: número de clientes, número de monitores y número de actividades ofertadas.
+---
+
+## Cuestiones Necesarias para el Uso de la Aplicación en Docker
+
+Para acceder a la página inicial de la aplicación, se debe escribir en el navegador la siguiente dirección:
+`localhost:8080`
+
+### Cuentas de Usuario para Pruebas en Docker
+
+Para probar nuestro sistema, hemos almacenado en la base de datos las siguientes cuentas de usuario, las cuales pertenecen a distintos roles y permiten acceder a diferentes pantallas:
+
+#### ADMINISTRADOR
+- **Correo:** `admin@powerfit.com`  
+  **Contraseña:** `admin`
+
+#### MONITORES
+Las cuentas de monitores tienen una contraseña con el formato `password_{nombre}`.  
+Ejemplos:
+- **Correo:** `laura.s@powerfit.com`  
+  **Contraseña:** `password_laura`
+- **Correo:** `paula.p@powerfit.com`  
+  **Contraseña:** `password_paula`
+- *Análogamente para las cuentas del resto de monitores.*
+
+> **Nota:** Se pueden eliminar cuentas de monitores existentes y crear una nueva cuenta siempre que el correo del monitor finalice con el sufijo `@powerfit.com`.
+
+#### CLIENTES
+Ejemplos de cuentas de clientes:
+- **Correo:** `sandra.f@hotmail.com`  
+  **Contraseña:** `password_sandra`
+- **Correo:** `hector.p@unizar.es`  
+  **Contraseña:** `password_hector`
+- **Correo:** `laura.m@gmail.com`  
+  **Contraseña:** `password_laura`
+- **Correo:** `andres.c@hotmail.com`  
+  **Contraseña:** `password_andres`
+- *Análogamente para las cuentas del resto de clientes.*
+
+> **Nota:** Se pueden eliminar cuentas de clientes existentes y crear una nueva cuenta con el sufijo que el cliente desee.
 
