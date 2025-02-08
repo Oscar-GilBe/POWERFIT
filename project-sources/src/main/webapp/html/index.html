@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de - Power Fit</title>
+    <link rel="icon" href="/POWERFIT/images/gimnasio.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/POWERFIT/css/acercaDe.css">
+</head>
+	<style>
+		/* Estilos del encabezado sin panel */
+		.header-sin-panel {
+		    background-color: #FFCE42; /* Color de fondo amarillo */
+		    display: flex; /* Disposición en flexbox */
+		    justify-content: space-between; /* Espacio entre el título y el menú */
+		    padding: 10px; /* Espaciado interior */
+		    align-items: center; /* Alinea verticalmente los elementos */
+		    position: fixed; /* Fija el encabezado en la parte superior */
+		    top: 0; /* Lo fija en la parte superior */
+		    width: 100%; /* Asegura que el encabezado ocupe el ancho correcto */
+		    z-index: 1001; /* Asegura que esté por encima del contenido */
+			left: 0;
+		}
+		
+		/* Estilos del contenedor del título en el encabezado */
+		.header-titulo {
+		    display: flex; /* Disposición en flexbox */
+		    align-items: center; /* Alinea verticalmente los elementos */
+		}
+		
+		/* Estilos del logo dentro del encabezado */
+		.logo-header img {
+		    display: block;
+		    width: 80px; /* Ajuste del tamaño de la imagen */
+		    margin: 0 auto 20px auto; /* Centrado horizontal y margen inferior */
+		    margin-left: 20px;
+    		margin-bottom: 10px;
+		}
+		
+		/* Estilos del título en el encabezado */
+		.header-sin-panel .titulo {
+		    font-weight: bold; /* Negrita para el título */
+		    font-size: 35px; /* Tamaño de fuente */
+		    color: #fff; /* Color del título */
+		    padding: 0 50px; /* Espaciado a los lados */
+		    font-family: 'Arial Black', sans-serif; /* Fuente destacada */
+		    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para efecto visual */
+		}
+		
+		/* Estilos para los enlaces de navegación solo en versión escritorio */
+		.desktop-nav {
+		    display: flex;                 /* Flexbox para organizar los elementos */
+		    justify-content: flex-end;     /* Alinea los elementos a la derecha */
+		    align-items: center;           /* Centra verticalmente en el header */
+		}
+		
+		/* Estilos para los enlaces de navegación en el encabezado */
+		.desktop-nav a {
+		    text-decoration: none; /* Sin subrayado */
+		    background-color: #8000ff; /* Fondo blanco para los botones */
+		    color: #ffffff; /* Color del texto */
+		    padding: 10px 20px; /* Espaciado interior */
+		    border: 4px solid #000000; /* Borde alrededor de cada enlace */
+		    border-right: none; /* Sin borde derecho */
+		    font-size: 16px; /* Tamaño de fuente */
+		    font-weight: bold; /* Negrita */
+		}
+		
+		/* Añade borde derecho al último enlace de la navegación */
+		.desktop-nav a:last-child {
+		    border-right: 4px solid #000000; /* Añade borde al último enlace */
+		}
+		
+		/* Estilos del enlace activado para ordenador */
+		.desktop-nav a.active {
+		    background-color: #550863; /* Fondo más oscuro al pasar el ratón */
+		}
+		
+		/* Estilos al pasar el ratón por los enlaces de navegación */
+		.desktop-nav a:hover {
+		    background-color: #420083; /* Fondo más oscuro al pasar el ratón */
+		}
+		
+		.desktop-nav .btn-iniciar-sesion {
+		    background-color: #a15600; /* Fondo más oscuro al pasar el ratón */
+		}
+		
+		/* Estilos al pasar el ratón por los enlaces de navegación */
+		.desktop-nav .btn-iniciar-sesion:hover {
+		    background-color: #673400; /* Fondo más oscuro al pasar el ratón */
+		}
+    </style>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<body>
+   <!-- Encabezado -->
+   <div class="header-sin-panel"> <!-- Contenedor del encabezado -->
+       <div class="header-titulo">
+           <div class="logo-header">
+               <img src="/POWERFIT/images/logo.jpg" alt="PowerFit Logo">
+           </div>
+           <a href="#" class="logo"><span class="titulo">POWER FIT</span></a>
+      </div>
+           <nav class="desktop-nav"> <!-- Navegación del encabezado -->
+				<a href="#home">Inicio</a>
+	            <a href="#about">Acerca de</a>
+	            <a href="#features">Características</a>
+	            <a href="/POWERFIT/html/iniciar-sesion.jsp" class="btn-iniciar-sesion">Iniciar Sesión</a>
+           </nav>
+       
+   </div>
+
+   <!-- Home -->
+    <section class="home" id="home">
+        <div class="swiper home-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide" style="background: url(/POWERFIT/images/home3.jpg) no-repeat;">
+                    <div class="content">
+                        <span>💪🏻 Tu mejor versión te está esperando 🔥</span>
+                        <h3>PowerFit, tu camino hacia una vida más fuerte</h3>
+                        <a href="/POWERFIT/html/iniciar-sesion.jsp" class="btn">Iniciar Sesión</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(/POWERFIT/images/home2.jpg) no-repeat;">
+                    <div class="content">
+                        <span>💪🏻 Tu mejor versión te está esperando 🔥</span>
+                        <h3>PowerFit, tu camino hacia una vida más fuerte</h3>
+                        <a href="/POWERFIT/html/iniciar-sesion.jsp" class="btn">Iniciar Sesión</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide" style="background: url(/POWERFIT/images/home1.jpg) no-repeat;">
+                    <div class="content">
+                        <span>💪🏻 Tu mejor versión te está esperando 🔥</span>
+                        <h3>PowerFit, tu camino hacia una vida más fuerte</h3>
+                        <a href="/POWERFIT/html/iniciar-sesion.jsp" class="btn">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- Acerca de -->
+    <section class="about" id="about">
+        <div class="image">
+            <img src="/POWERFIT/images/about.jpg" alt="Imagen de Gimnasio">
+        </div>
+
+        <div class="content">
+            <h1 class="heading"> <span>Sobre Nosotros</span> </h1>
+            <span>Nuestra misión</span>
+            <h3 class="title">Cada día es una oportunidad para mejorar y volverte más fuerte</h3>
+            <p>Desde la web Power Fit, nos dedicamos a ayudarte a lograr tus objetivos.
+                Ofrecemos un ambiente amigable y profesional para que cada miembro
+                se sienta apoyado en su viaje hacia una vida más saludable.</p>
+
+            <div class="box-container">
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>Reserva fácilmente 📒</h3>
+                    <p>Reserva clases de una actividad de tu interés en pocos cliks</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>Opiniones y valoraciones de otros usuarios ⭐</h3>
+                    <p>Lee en todo momento lo que el resto de nuestra comunidad piensa sobre nuestras actividades.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>Gestiona tu tiempo ⏳</h3>
+                    <p>Visualiza tus reservas de clases en nuestro horario personalizado.</p>
+                </div>
+                <div class="box">
+                    <h3><i class="fas fa-check"></i>Filtra y busca las actividades de acuerdo a tus intereses 🤸‍♂️</h3>
+                    <p>Filtra actividades según el grupo muscular, dificultad, puntuación o sala.
+                        Y/o si lo prefieres realiza una búsqueda en nuestro buscador</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características  -->
+    <section class="features" id="features">
+        <h1 class="heading"> <span>Nuestro gimnasio</span> </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="/POWERFIT/images/home1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/icon-1.png" alt="">
+                    <h3>Profesionales a tu lado</h3>
+                    <p>Nuestros profesionales son expertos de la materia. ¡Déjate aconsejar!</p>
+                </div>
+            </div>
+
+            <div class="box second">
+                <div class="image">
+                    <img src="/POWERFIT/images/home2.jpg" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/icon-2.png" alt="">
+                    <h3>Muchas actividades te esperan</h3>
+                    <p>Nuestro gimnasio ofrece muchas actividades, pruébalas reservando clases.</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="/POWERFIT/images/home.jpg" alt="">
+                </div>
+                <div class="content">
+                    <img src="images/icon-3.png" alt="">
+                    <h3>Instalaciones sotisficadas</h3>
+                    <p>Nuestro gimnasio cuenta con multitud de salas con materiales a tu disposición.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- banner -->
+    <section class="banner">
+        <span>Únete ahora mismo</span>
+        <h3>Resgistrarse ahora</h3>
+        <p>¡¡¿¿A qué estás esperando??!! No pierdas más el tiempo y únete ya.
+        </p>
+        <a href="/POWERFIT/html/registrarse.jsp" class="btn">Resgistarse</a>
+    </section>
+
+    <!-- footer -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Horario de apertura</h3>
+                <p> Todos los días de: <i> 8:00am - 20:00pm </i> </p>
+            </div>
+
+            <div class="box">
+                <h3>Contacto</h3>
+                <p> <i class="fas fa-phone"></i> +34 900 00 00 00 </p>
+                <p> <i class="fas fa-envelope"></i> power-fit@gmail.com </p>
+                <p> <i class="fas fa-map"></i> Zaragoza, España - 50018 </p>
+            </div>
+       </div>
+    </section>
+
+
+    <script>
+    const swiper = new Swiper('.home-slider', {
+        loop: true,               // Habilita el bucle para los slides
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 8000,           // Cambia de imagen cada 8 segundos
+            disableOnInteraction: false,
+        }
+    });
+    </script>
+</body>
+</html>

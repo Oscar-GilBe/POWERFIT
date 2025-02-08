@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsive -->
+    <title>Cerrando sesión - Powerfit</title> <!-- Título de la página -->
+    <link rel="icon" href="/POWERFIT/images/gimnasio.png"> <!-- Icono de la pestaña -->
+    <link rel="stylesheet" href="/POWERFIT/css/styles.css"> <!-- Enlace al archivo CSS externo -->
+</head>
+<body>
+
+    <!-- Panel lateral -->
+    <div class="sidebar" id="sidebar"> <!-- Contenedor del panel lateral -->
+        <span class="close-btn" id="closeBtn" onclick="toggleSidebar()">&#10005;</span> <!-- Botón de cierre (cruz) para el panel lateral -->
+        <img src="/POWERFIT/images/logo.jpg" alt="Power Fit Logo"> <!-- Imagen del logo -->
+        <a href="#" class="active">MI CUENTA</a> <!-- Enlace a "Mi Cuenta" -->
+        <a href="#">MIS DATOS</a> <!-- Enlace a "Mis Datos" -->
+        <a href="#">MIS CLASES</a> <!-- Enlace a "Mis clases" -->
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="main-content"> <!-- Contenedor principal que engloba el contenido -->
+
+        <!-- Encabezado -->
+        <div class="header"> <!-- Contenedor del encabezado -->
+            <span class="hamburger" onclick="toggleSidebar()">&#9776;</span> <!-- Botón de menú hamburguesa -->
+            <div class="header-titulo">
+                <span class="titulo">POWER FIT</span> <!-- Logo "POWER FIT" -->
+            </div>            
+        </div>
+
+        <!-- Sección de éxito -->
+        <div class="mensaje">
+            <div class="icono-exito">
+                <img src="/POWERFIT/images/exito.png" alt="Operación realizada con éxito">
+            </div>
+            <h1>¡Sesión cerrada!</h1>
+            <p>Tu sesión se ha cerrado con éxito. <br> Vuelve a iniciar sesión cuando quieras.</p>
+        </div>
+
+    </div>
+
+    <!-- Script para mostrar/ocultar el panel lateral -->
+    <script>
+	 // Mostrar mensaje de "Redirigiendo..." y luego redirigir después de 5 segundos
+	    setTimeout(function() {
+	        document.getElementById('loadingMessage').style.display = 'block'; // Muestra el mensaje de carga
+	    }, 500); // Muestra el mensaje de carga a los 3 segundos
+        // Redirige después de 5 segundos (5000 ms)
+        setTimeout(function() {
+            window.location.href = "/POWERFIT/html/index.html"; // Cambia "otra_pagina.html" por la URL de destino
+        }, 5000); // 5000 milisegundos = 5 segundos
+    </script>
+
+</body>
+</html>
