@@ -3,8 +3,11 @@ Funcionalidades del sistema de información
 
 Cliente:
     ● El sistema permitirá registrarse aportando su información personal: nombre, apellidos, correo y contraseña.
+    
     ● El sistema permitirá identificarse introduciendo su correo y contraseña.
+    
     ● El sistema permitirá cerrar la sesión.
+    
     ● El sistema permitirá eliminar permanentemente la cuenta.
     ● El sistema permitirá modificar su información personal (nombre, apellidos y contraseña).
     ● El sistema permitirá listar las actividades ofertadas por el gimnasio.
