@@ -1,0 +1,2 @@
+2024-10-04 12:17:24.706 CEST [5256] LOG:  empezando checkpoint: time
+2024-10-04 12:17:34.682 CEST [5256] LOG:  checkpoint completo: escritos 92 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=9.903 s, sync=0.050 s, total=9.977 s; archivos sincronizados=65, más largo=0.003 s, promedio=0.001 s; distancia=617 kB, estimación=617 kB; lsn=0/16A93B0, lsn de redo=0/16A9320

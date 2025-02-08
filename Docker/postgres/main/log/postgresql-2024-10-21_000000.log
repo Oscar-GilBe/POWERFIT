@@ -1,0 +1,10 @@
+2024-10-21 19:09:51.038 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-21 19:09:51.277 CEST [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.223 s, sync=0.005 s, total=0.242 s; archivos sincronizados=3, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=14 kB; lsn=0/16B3750, lsn de redo=0/16B36F8
+2024-10-21 19:14:51.280 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-21 19:14:51.738 CEST [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.437 s, sync=0.006 s, total=0.458 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=13 kB; lsn=0/16B3D78, lsn de redo=0/16B3CE8
+2024-10-22 13:08:12.420 CEST [12304] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-10-22 13:08:12.420 CEST [38320] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-10-22 17:03:56.070 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-22 17:03:56.549 CEST [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.448 s, sync=0.007 s, total=0.482 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.002 s; distancia=1 kB, estimación=11 kB; lsn=0/16B4510, lsn de redo=0/16B44B8

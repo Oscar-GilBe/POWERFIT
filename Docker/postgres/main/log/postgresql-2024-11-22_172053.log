@@ -1,0 +1,18 @@
+2024-11-22 17:20:53.481 CET [19776] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 17:10:41 CET
+2024-11-22 17:22:34.509 CET [5756] ERROR:  error de sintaxis en o cerca de «SET» en carácter 30
+2024-11-22 17:22:34.509 CET [5756] SENTENCIA:  SET search_path TO sisinf_p2
+	SET search_path TO sisinf_p2;
+2024-11-22 17:23:20.056 CET [5756] ERROR:  error de sintaxis en o cerca de «SET» en carácter 30
+2024-11-22 17:23:20.056 CET [5756] SENTENCIA:  SET search_path TO sisinf_p2
+	SET search_path TO sisinf_p2;
+2024-11-22 17:25:53.489 CET [20440] LOG:  empezando checkpoint: time
+2024-11-22 17:25:53.848 CET [20440] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.334 s, sync=0.006 s, total=0.364 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/2D57188, lsn de redo=0/2D57130
+2024-11-22 17:31:46.075 CET [5756] ERROR:  error de sintaxis en o cerca de «SELECT» en carácter 23
+2024-11-22 17:31:46.075 CET [5756] SENTENCIA:  SELECT * FROM usuario
+	SELECT * FROM usuario;
+2024-11-22 17:33:20.400 CET [20676] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 17:33:20.400 CET [5756] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 17:33:20.403 CET [1984] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 17:33:20.417 CET [20440] LOG:  apagando
+2024-11-22 17:33:20.418 CET [20440] LOG:  empezando checkpoint: shutdown immediate
+2024-11-22 17:33:20.427 CET [20440] LOG:  checkpoint completo: escritos 1 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.002 s, total=0.010 s; archivos sincronizados=1, más largo=0.002 s, promedio=0.002 s; distancia=0 kB, estimación=0 kB; lsn=0/2D57238, lsn de redo=0/2D57238

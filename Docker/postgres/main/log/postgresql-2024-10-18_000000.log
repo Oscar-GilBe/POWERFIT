@@ -1,0 +1,6 @@
+2024-10-19 13:40:39.821 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-19 13:40:41.046 CEST [7696] LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.204 s, sync=0.005 s, total=1.233 s; archivos sincronizados=2, más largo=0.004 s, promedio=0.003 s; distancia=28 kB, estimación=28 kB; lsn=0/16B06C8, lsn de redo=0/16B0670
+2024-10-19 16:38:54.253 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-19 16:38:54.500 CEST [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.228 s, sync=0.004 s, total=0.253 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=2 kB, estimación=25 kB; lsn=0/16B1198, lsn de redo=0/16B1140
+2024-10-19 16:40:18.046 CEST [33204] FATAL:  la autentificación password falló para el usuario «postgres»
+2024-10-19 16:40:18.046 CEST [33204] DETALLE:  La conexión coincidió con el archivo «C:/Program Files/PostgreSQL/17/data/pg_hba.conf» línea 115: «host    all             all             127.0.0.1/32            scram-sha-256»

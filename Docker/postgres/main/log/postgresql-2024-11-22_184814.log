@@ -1,0 +1,6 @@
+2024-11-22 18:48:14.838 CET [7920] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 18:44:17 CET
+2024-11-22 18:49:54.671 CET [5560] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-22 18:50:58.897 CET [21304] LOG:  apagando
+2024-11-22 18:50:58.900 CET [21304] LOG:  empezando checkpoint: shutdown immediate
+2024-11-22 18:50:58.928 CET [21304] LOG:  checkpoint completo: escritos 18 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.005 s, sync=0.010 s, total=0.031 s; archivos sincronizados=11, más largo=0.002 s, promedio=0.001 s; distancia=80 kB, estimación=80 kB; lsn=0/2E12178, lsn de redo=0/2E12178

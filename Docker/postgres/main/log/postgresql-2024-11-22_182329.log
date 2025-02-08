@@ -1,0 +1,7 @@
+2024-11-22 18:23:29.640 CET [2824] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 17:33:20 CET
+2024-11-22 18:24:04.994 CET [8088] ERROR:  no existe la relación «monitor» en carácter 15
+2024-11-22 18:24:04.994 CET [8088] SENTENCIA:  SELECT * FROM monitor where correo = 'monitor1@powerfit.com';
+2024-11-22 18:26:51.383 CET [8088] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:26:51.394 CET [5612] LOG:  apagando
+2024-11-22 18:26:51.396 CET [5612] LOG:  empezando checkpoint: shutdown immediate
+2024-11-22 18:26:51.414 CET [5612] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.002 s, sync=0.002 s, total=0.020 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=0/2D572E8, lsn de redo=0/2D572E8

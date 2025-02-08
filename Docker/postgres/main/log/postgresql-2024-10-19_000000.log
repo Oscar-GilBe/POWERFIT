@@ -1,0 +1,12 @@
+2024-10-19 20:22:16.943 CEST [22852] FATAL:  no existe la base de datos «sisinf_p2»
+2024-10-19 20:34:46.056 CEST [26748] ERROR:  error de sintaxis en o cerca de Â«\Â» en carÃ¡cter 1
+2024-10-19 20:34:46.056 CEST [26748] SENTENCIA:  \c sisinf_p2 postgres
+2024-10-19 20:35:57.357 CEST [26856] FATAL:  no existe la base de datos «sisinf_p2»
+2024-10-19 20:39:43.899 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-19 20:39:44.694 CEST [7696] LOG:  checkpoint completo: escritos 8 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.772 s, sync=0.006 s, total=0.800 s; archivos sincronizados=6, más largo=0.002 s, promedio=0.001 s; distancia=0 kB, estimación=23 kB; lsn=0/16B1578, lsn de redo=0/16B1520
+2024-10-19 20:44:43.700 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-19 20:44:44.269 CEST [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.551 s, sync=0.005 s, total=0.570 s; archivos sincronizados=3, más largo=0.003 s, promedio=0.002 s; distancia=4 kB, estimación=21 kB; lsn=0/16B28F0, lsn de redo=0/16B2898
+2024-10-20 10:41:53.872 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-20 10:41:54.124 CEST [7696] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.226 s, sync=0.007 s, total=0.260 s; archivos sincronizados=3, más largo=0.004 s, promedio=0.003 s; distancia=0 kB, estimación=19 kB; lsn=0/16B2B80, lsn de redo=0/16B2B28
+2024-10-20 10:46:53.125 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-20 10:46:53.586 CEST [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.445 s, sync=0.006 s, total=0.462 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=1 kB, estimación=17 kB; lsn=0/16B3038, lsn de redo=0/16B2FE0

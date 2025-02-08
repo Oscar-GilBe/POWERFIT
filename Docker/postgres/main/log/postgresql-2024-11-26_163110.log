@@ -1,0 +1,59 @@
+2024-11-26 16:31:10.602 CET [25584] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 18:50:58 CET
+2024-11-26 16:36:10.599 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 16:36:21.225 CET [30724] LOG:  checkpoint completo: escritos 100 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=10.564 s, sync=0.032 s, total=10.632 s; archivos sincronizados=62, más largo=0.004 s, promedio=0.001 s; distancia=569 kB, estimación=569 kB; lsn=0/2EA2990, lsn de redo=0/2EA07B8
+2024-11-26 16:36:57.320 CET [22884] ERROR:  inserción o actualización en la tabla «monitor» viola la llave foránea «monitor_correo_fkey»
+2024-11-26 16:36:57.320 CET [22884] DETALLE:  La llave (correo)=(monitor11@powerfit.com) no está presente en la tabla «usuario».
+2024-11-26 16:36:57.320 CET [22884] SENTENCIA:  INSERT INTO sisinf_p2.MONITOR (correo) VALUES ('monitor11@powerfit.com');
+2024-11-26 16:41:10.236 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 16:41:10.911 CET [30724] LOG:  checkpoint completo: escritos 7 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.659 s, sync=0.005 s, total=0.675 s; archivos sincronizados=6, más largo=0.002 s, promedio=0.001 s; distancia=11 kB, estimación=513 kB; lsn=0/2EA34D0, lsn de redo=0/2EA3478
+2024-11-26 17:05:51.575 CET [4044] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-26 17:06:10.951 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:06:11.517 CET [30724] LOG:  checkpoint completo: escritos 6 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.548 s, sync=0.004 s, total=0.571 s; archivos sincronizados=6, más largo=0.001 s, promedio=0.001 s; distancia=45 kB, estimación=466 kB; lsn=0/2EB3A40, lsn de redo=0/2EAE890
+2024-11-26 17:21:10.542 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:21:11.659 CET [30724] LOG:  checkpoint completo: escritos 11 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.088 s, sync=0.012 s, total=1.119 s; archivos sincronizados=9, más largo=0.003 s, promedio=0.002 s; distancia=20 kB, estimación=422 kB; lsn=0/2EB3C00, lsn de redo=0/2EB3B70
+2024-11-26 17:26:10.664 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:26:15.923 CET [30724] LOG:  checkpoint completo: escritos 49 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.234 s, sync=0.010 s, total=5.259 s; archivos sincronizados=11, más largo=0.002 s, promedio=0.001 s; distancia=297 kB, estimación=409 kB; lsn=0/2EFE278, lsn de redo=0/2EFE220
+2024-11-26 17:31:10.929 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:31:16.623 CET [30724] LOG:  checkpoint completo: escritos 53 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=5.670 s, sync=0.010 s, total=5.695 s; archivos sincronizados=10, más largo=0.003 s, promedio=0.001 s; distancia=368 kB, estimación=405 kB; lsn=0/2F5A5E0, lsn de redo=0/2F5A550
+2024-11-26 17:36:10.631 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:36:14.550 CET [30724] LOG:  checkpoint completo: escritos 37 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.904 s, sync=0.008 s, total=3.919 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=211 kB, estimación=386 kB; lsn=0/2F8F568, lsn de redo=0/2F8F510
+2024-11-26 17:41:10.565 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:41:13.301 CET [30724] LOG:  checkpoint completo: escritos 26 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=2.720 s, sync=0.007 s, total=2.737 s; archivos sincronizados=13, más largo=0.001 s, promedio=0.001 s; distancia=111 kB, estimación=358 kB; lsn=0/2FAB480, lsn de redo=0/2FAB428
+2024-11-26 17:46:10.313 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:46:14.235 CET [30724] LOG:  checkpoint completo: escritos 37 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=3.906 s, sync=0.009 s, total=3.923 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=235 kB, estimación=346 kB; lsn=0/2FE6428, lsn de redo=0/2FE63D0
+2024-11-26 17:51:10.245 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:51:13.855 CET [30724] LOG:  checkpoint completo: escritos 34 búfers (0.2%); 0 archivos WAL añadidos, 0 eliminados, 1 reciclados; write=3.591 s, sync=0.007 s, total=3.611 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=213 kB, estimación=333 kB; lsn=0/30380C8, lsn de redo=0/301BA28
+2024-11-26 17:56:10.866 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 17:56:15.790 CET [30724] LOG:  checkpoint completo: escritos 46 búfers (0.3%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=4.907 s, sync=0.007 s, total=4.924 s; archivos sincronizados=10, más largo=0.002 s, promedio=0.001 s; distancia=313 kB, estimación=331 kB; lsn=0/306A0D0, lsn de redo=0/306A078
+2024-11-26 18:00:15.421 CET [8936] ERROR:  error de sintaxis en o cerca de «SELECT» en carácter 30
+2024-11-26 18:00:15.421 CET [8936] SENTENCIA:  set search_path to sisinf_p2
+	SELECT * FROM actividad
+	;
+2024-11-26 18:01:10.801 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:01:12.958 CET [8936] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-26 18:01:44.246 CET [30724] LOG:  checkpoint completo: escritos 308 búfers (1.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=33.426 s, sync=0.010 s, total=33.446 s; archivos sincronizados=14, más largo=0.002 s, promedio=0.001 s; distancia=812 kB, estimación=812 kB; lsn=0/313BE20, lsn de redo=0/31352B0
+2024-11-26 18:06:10.250 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:07:02.558 CET [30724] LOG:  checkpoint completo: escritos 482 búfers (2.9%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=52.293 s, sync=0.009 s, total=52.308 s; archivos sincronizados=19, más largo=0.001 s, promedio=0.001 s; distancia=4948 kB, estimación=4948 kB; lsn=0/3621988, lsn de redo=0/360A5F8
+2024-11-26 18:21:10.591 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:21:11.600 CET [30724] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.991 s, sync=0.008 s, total=1.010 s; archivos sincronizados=8, más largo=0.003 s, promedio=0.001 s; distancia=102 kB, estimación=4464 kB; lsn=0/36241C8, lsn de redo=0/3624170
+2024-11-26 18:26:10.613 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:26:11.056 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.430 s, sync=0.005 s, total=0.444 s; archivos sincronizados=5, más largo=0.002 s, promedio=0.001 s; distancia=11 kB, estimación=4018 kB; lsn=0/3626EE8, lsn de redo=0/3626E90
+2024-11-26 18:36:10.072 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:36:10.531 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.443 s, sync=0.006 s, total=0.459 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=12 kB, estimación=3618 kB; lsn=0/362A1C0, lsn de redo=0/362A168
+2024-11-26 18:41:10.533 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 18:41:10.974 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.429 s, sync=0.006 s, total=0.442 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=11 kB, estimación=3257 kB; lsn=0/362D0C0, lsn de redo=0/362D068
+2024-11-26 19:01:10.995 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 19:01:11.434 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.428 s, sync=0.003 s, total=0.440 s; archivos sincronizados=5, más largo=0.001 s, promedio=0.001 s; distancia=13 kB, estimación=2933 kB; lsn=0/3630838, lsn de redo=0/36307E0
+2024-11-26 19:06:10.446 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 19:06:10.890 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.430 s, sync=0.006 s, total=0.445 s; archivos sincronizados=5, más largo=0.003 s, promedio=0.002 s; distancia=14 kB, estimación=2641 kB; lsn=0/3634378, lsn de redo=0/3634320
+2024-11-26 19:11:10.901 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 19:11:11.341 CET [30724] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.428 s, sync=0.004 s, total=0.440 s; archivos sincronizados=5, más largo=0.001 s, promedio=0.001 s; distancia=14 kB, estimación=2378 kB; lsn=0/3637E70, lsn de redo=0/3637E18
+2024-11-26 19:16:10.343 CET [30724] LOG:  empezando checkpoint: time
+2024-11-26 19:16:11.340 CET [30724] LOG:  checkpoint completo: escritos 10 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.984 s, sync=0.006 s, total=0.999 s; archivos sincronizados=7, más largo=0.002 s, promedio=0.001 s; distancia=45 kB, estimación=2145 kB; lsn=0/3643630, lsn de redo=0/36435D8
+2024-11-26 19:24:45.113 CET [27188] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-26 19:24:45.117 CET [31656] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-26 19:24:45.141 CET [30724] LOG:  apagando
+2024-11-26 19:24:45.144 CET [30724] LOG:  empezando checkpoint: shutdown immediate
+2024-11-26 19:24:45.152 CET [30724] LOG:  checkpoint completo: escritos 0 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.001 s, sync=0.001 s, total=0.011 s; archivos sincronizados=0, más largo=0.000 s, promedio=0.000 s; distancia=0 kB, estimación=1930 kB; lsn=0/36436E0, lsn de redo=0/36436E0

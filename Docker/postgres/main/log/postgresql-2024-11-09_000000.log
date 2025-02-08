@@ -1,0 +1,40 @@
+2024-11-09 20:56:04.279 CET [45576] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«usuario_pkeyÂ»
+2024-11-09 20:56:04.279 CET [45576] DETALLE:  Ya existe la llave (correo)=(admin@powerfit.com).
+2024-11-09 20:56:04.279 CET [45576] SENTENCIA:  -- Insertar administrador
+	INSERT INTO sisinf_p2.USUARIO (correo, nombre, apellidos, contrasena) 
+	VALUES ('admin@powerfit.com', 'admin', 'admin', 'admin')
+2024-11-09 20:56:11.549 CET [7696] LOG:  empezando checkpoint: time
+2024-11-09 20:56:12.014 CET [7696] LOG:  checkpoint completo: escritos 5 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.448 s, sync=0.004 s, total=0.472 s; archivos sincronizados=4, más largo=0.002 s, promedio=0.001 s; distancia=1 kB, estimación=205 kB; lsn=0/17D7660, lsn de redo=0/17D7608
+2024-11-09 20:56:46.730 CET [44044] ERROR:  update o delete en Â«monitorÂ» viola la llave forÃ¡nea Â«actividad_monitor_fkeyÂ» en la tabla Â«actividadÂ»
+2024-11-09 20:56:46.730 CET [44044] DETALLE:  La llave (correo)=(monitor1@powerfit.com) todavÃ­a es referida desde la tabla Â«actividadÂ».
+2024-11-09 20:56:46.730 CET [44044] SENTENCIA:  DELETE FROM sisinf_p2.usuario
+		WHERE correo=$1
+2024-11-09 20:57:20.980 CET [45576] ERROR:  la sintaxis de entrada no es vÃ¡lida para tipo boolean: Â«%@hotmail.comÂ» en carÃ¡cter 158
+2024-11-09 20:57:20.980 CET [45576] SENTENCIA:  -- Asignar a los clientes como tipo cliente
+	INSERT INTO sisinf_p2.CLIENTE (correo)
+	SELECT correo FROM sisinf_p2.USUARIO WHERE correo LIKE '%@gmail.com' OR '%@hotmail.com' OR '%@unizar.es'
+2024-11-09 21:01:11.022 CET [7696] LOG:  empezando checkpoint: time
+2024-11-09 21:01:12.288 CET [45576] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«usuario_pkeyÂ»
+2024-11-09 21:01:12.288 CET [45576] DETALLE:  Ya existe la llave (correo)=(monitor2@powerfit.com).
+2024-11-09 21:01:12.288 CET [45576] SENTENCIA:  -- Insertar monitores
+	INSERT INTO sisinf_p2.USUARIO (correo, nombre, apellidos, contrasena)
+	VALUES 
+	    ('monitor1@powerfit.com', 'Laura', 'Sanchez', 'password1'),
+	    ('monitor2@powerfit.com', 'Pablo', 'Garcia', 'password2'),
+	    ('monitor3@powerfit.com', 'Sofia', 'Martinez', 'password3'),
+	    ('monitor4@powerfit.com', 'Andres', 'Lopez', 'password4'),
+	    ('monitor5@powerfit.com', 'Julia', 'Gomez', 'password5'),
+	    ('monitor6@powerfit.com', 'Carlos', 'Diaz', 'password6'),
+	    ('monitor7@powerfit.com', 'Cristina', 'Perez', 'password7'),
+	    ('monitor8@powerfit.com', 'Fernando', 'Gonzalez', 'password8'),
+	    ('monitor9@powerfit.com', 'Mariana', 'Rodriguez', 'password9'),
+	    ('monitor10@powerfit.com', 'Raul', 'Hernandez', 'password10')
+2024-11-09 21:01:23.570 CET [7696] LOG:  checkpoint completo: escritos 116 búfers (0.7%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=12.485 s, sync=0.047 s, total=12.549 s; archivos sincronizados=63, más largo=0.003 s, promedio=0.001 s; distancia=703 kB, estimación=703 kB; lsn=0/1888A38, lsn de redo=0/1887538
+2024-11-09 21:06:11.590 CET [7696] LOG:  empezando checkpoint: time
+2024-11-09 21:06:12.467 CET [7696] LOG:  checkpoint completo: escritos 9 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.859 s, sync=0.009 s, total=0.878 s; archivos sincronizados=8, más largo=0.003 s, promedio=0.001 s; distancia=12 kB, estimación=634 kB; lsn=0/188A7C8, lsn de redo=0/188A770
+2024-11-09 22:27:26.844 CET [20400] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-11-09 22:31:09.598 CET [7696] LOG:  empezando checkpoint: time
+2024-11-09 22:31:11.137 CET [7696] LOG:  checkpoint completo: escritos 15 búfers (0.1%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=1.520 s, sync=0.011 s, total=1.540 s; archivos sincronizados=10, más largo=0.003 s, promedio=0.002 s; distancia=78 kB, estimación=579 kB; lsn=0/189E068, lsn de redo=0/189DFF8
+2024-11-09 22:34:48.419 CET [28096] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	

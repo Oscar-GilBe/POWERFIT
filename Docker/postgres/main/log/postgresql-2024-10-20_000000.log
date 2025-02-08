@@ -1,0 +1,8 @@
+2024-10-21 09:59:07.241 CEST [12304] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«usuario_pkeyÂ»
+2024-10-21 09:59:07.241 CEST [12304] DETALLE:  Ya existe la llave (correo)=(b.a.ruben26@gmail.com).
+2024-10-21 09:59:07.241 CEST [12304] SENTENCIA:  INSERT INTO usuario (correo, nombre, apellidos, contrasena) VALUES ($1, $2, $3, $4)
+2024-10-21 09:59:20.589 CEST [38320] ERROR:  llave duplicada viola restricciÃ³n de unicidad Â«usuario_pkeyÂ»
+2024-10-21 09:59:20.589 CEST [38320] DETALLE:  Ya existe la llave (correo)=(b.a.ruben26@gmail.com).
+2024-10-21 09:59:20.589 CEST [38320] SENTENCIA:  INSERT INTO usuario (correo, nombre, apellidos, contrasena) VALUES ($1, $2, $3, $4)
+2024-10-21 10:01:20.700 CEST [7696] LOG:  empezando checkpoint: time
+2024-10-21 10:01:20.828 CEST [7696] LOG:  checkpoint completo: escritos 2 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.108 s, sync=0.004 s, total=0.131 s; archivos sincronizados=2, más largo=0.003 s, promedio=0.002 s; distancia=0 kB, estimación=15 kB; lsn=0/16B33A0, lsn de redo=0/16B3348

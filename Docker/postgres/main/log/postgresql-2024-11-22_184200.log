@@ -1,0 +1,31 @@
+2024-11-22 18:42:00.405 CET [22072] LOG:  el sistema de bases de datos fue apagado en 2024-11-22 18:26:51 CET
+2024-11-22 18:42:47.257 CET [8076] ERROR:  no existe la tabla «resena»
+2024-11-22 18:42:47.257 CET [8076] SENTENCIA:  drop table sisinf_p2.RESENA
+2024-11-22 18:42:52.272 CET [8076] ERROR:  no existe la tabla «resena»
+2024-11-22 18:42:52.272 CET [8076] SENTENCIA:  drop table sisinf_p2.RESENA
+2024-11-22 18:42:54.875 CET [8076] ERROR:  no existe la tabla «reserva»
+2024-11-22 18:42:54.875 CET [8076] SENTENCIA:  drop table sisinf_p2.RESERVA
+2024-11-22 18:42:55.667 CET [8076] ERROR:  no existe la tabla «clase»
+2024-11-22 18:42:55.667 CET [8076] SENTENCIA:  drop table sisinf_p2.CLASE
+2024-11-22 18:42:56.274 CET [8076] ERROR:  no existe la tabla «actividad»
+2024-11-22 18:42:56.274 CET [8076] SENTENCIA:  drop table sisinf_p2.ACTIVIDAD
+2024-11-22 18:42:56.884 CET [8076] ERROR:  no existe la tabla «sala»
+2024-11-22 18:42:56.884 CET [8076] SENTENCIA:  drop table sisinf_p2.SALA
+2024-11-22 18:42:57.489 CET [8076] ERROR:  no existe la tabla «monitor»
+2024-11-22 18:42:57.489 CET [8076] SENTENCIA:  drop table sisinf_p2.MONITOR
+2024-11-22 18:42:58.157 CET [8076] ERROR:  no existe la tabla «cliente»
+2024-11-22 18:42:58.157 CET [8076] SENTENCIA:  drop table sisinf_p2.CLIENTE
+2024-11-22 18:42:58.789 CET [8076] ERROR:  no existe la tabla «administrador»
+2024-11-22 18:42:58.789 CET [8076] SENTENCIA:  drop table sisinf_p2.ADMINISTRADOR
+2024-11-22 18:42:59.460 CET [8076] ERROR:  no existe la tabla «usuario»
+2024-11-22 18:42:59.460 CET [8076] SENTENCIA:  drop table sisinf_p2.USUARIO
+2024-11-22 18:43:10.979 CET [19948] ERROR:  no existe la relación «sisinf_p2.actividad» en carácter 17
+2024-11-22 18:43:10.979 CET [19948] SENTENCIA:  SELECT x.* FROM sisinf_p2.actividad x
+2024-11-22 18:44:17.680 CET [8076] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:44:17.680 CET [19948] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:44:17.681 CET [21320] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:44:17.682 CET [21748] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:44:17.683 CET [15544] FATAL:  terminando la conexión debido a una orden del administrador
+2024-11-22 18:44:17.697 CET [8800] LOG:  apagando
+2024-11-22 18:44:17.699 CET [8800] LOG:  empezando checkpoint: shutdown immediate
+2024-11-22 18:44:17.763 CET [8800] LOG:  checkpoint completo: escritos 103 búfers (0.6%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.009 s, sync=0.040 s, total=0.067 s; archivos sincronizados=64, más largo=0.002 s, promedio=0.001 s; distancia=666 kB, estimación=666 kB; lsn=0/2DFDE30, lsn de redo=0/2DFDE30

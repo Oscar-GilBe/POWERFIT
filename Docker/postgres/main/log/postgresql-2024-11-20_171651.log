@@ -1,0 +1,7 @@
+2024-11-20 17:16:51.886 CET [7224] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-11-15 09:59:44 CET
+2024-11-20 17:16:57.075 CET [7224] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-11-20 17:16:57.081 CET [7224] LOG:  redo comienza en 0/1F6ED50
+2024-11-20 17:16:57.081 CET [7224] LOG:  largo de registro no válido en 0/1F6EE58: se esperaba al menos 24, se obtuvo 0
+2024-11-20 17:16:57.081 CET [7224] LOG:  redo listo en 0/1F6EE20 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-11-20 17:16:57.204 CET [7208] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-11-20 17:16:57.280 CET [7208] LOG:  checkpoint completo: escritos 3 búfers (0.0%); 0 archivos WAL añadidos, 0 eliminados, 0 reciclados; write=0.003 s, sync=0.002 s, total=0.195 s; archivos sincronizados=2, más largo=0.001 s, promedio=0.001 s; distancia=0 kB, estimación=0 kB; lsn=0/1F6EE58, lsn de redo=0/1F6EE58
